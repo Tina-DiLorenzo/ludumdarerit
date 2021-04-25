@@ -8,11 +8,13 @@ public class PlayerMove : MonoBehaviour
     public float pos;
     public float velo;
     public Camera cam;
+    public static Sprite sprite;
+    public static bool running = false;
 
     //Movement floats
     public float maxSpeed = 1f;
     public float radius = .2f;
-    bool walking = false;
+    public static bool walking = false;
 
     //Testing force
     private Vector3 targetPos;
@@ -21,7 +23,7 @@ public class PlayerMove : MonoBehaviour
     Vector3 mouseScreen;
 
 
-    protected void Start()
+    void Start()
     {   //Starting positioning
         cam = Camera.main;
         pos = transform.position.x;
@@ -32,7 +34,13 @@ public class PlayerMove : MonoBehaviour
 
     protected void Update()
     {
-        
+        if (!running) return;
+        else
+        {
+            this.GetComponent<SpriteRenderer>().sprite = sprite;
+        }
+
+        //Get mouse location on click
         if (Input.GetMouseButtonDown(0))
         {
             mouseScreen = Input.mousePosition;
@@ -41,10 +49,11 @@ public class PlayerMove : MonoBehaviour
             walking = true;
         }
 
-        if (Mathf.Abs(transform.position.x - pos) < radius)
-        {
-            walking = false;
-        }
+        if (walking == false) return;
+        //for animation
+        //if (Mathf.Abs(transform.position.x - pos) < radius) walking = false;
+
+        //Player walks towards position
         transform.position = Vector3.MoveTowards(transform.position, targetPos, maxSpeed);
     }
 
