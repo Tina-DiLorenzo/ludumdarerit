@@ -135,7 +135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f7440f0421a67041887364e680bd932, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 8830792627183839419}
+  body: {fileID: 7569065708989417815}
   randScaleMin: 1
   randScaleMax: 1.5
 --- !u!1 &6508081828404958987

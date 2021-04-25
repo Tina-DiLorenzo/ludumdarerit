@@ -1241,7 +1241,7 @@ PrefabInstance:
       objectReference: {fileID: 226482852}
     - target: {fileID: 7459044473620446671, guid: e1d529cdf4bebd548bb113e517926dac, type: 3}
       propertyPath: wiggleForce
-      value: 50
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1d529cdf4bebd548bb113e517926dac, type: 3}

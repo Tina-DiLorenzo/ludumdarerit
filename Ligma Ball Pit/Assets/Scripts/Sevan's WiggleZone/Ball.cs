@@ -7,6 +7,7 @@ public class Ball : MonoBehaviour
 
 
     public SpriteRenderer sprite;
+    public Rigidbody2D body;
 
     public float randScaleMin = 0.7f;
     public float randScaleMax = 1.2f;

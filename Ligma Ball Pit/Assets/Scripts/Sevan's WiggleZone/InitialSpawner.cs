@@ -32,7 +32,7 @@ public class InitialSpawner : MonoBehaviour
             //newPosition.y += Random.Range(-range, range);
             newBall.transform.position = newPosition;
 
-            manager.balls.Add(newBall);
+            manager.balls.Add(newBall.GetComponent<Ball>());
 
             timer = Time.realtimeSinceStartup + ballsPerSecond;
         }
