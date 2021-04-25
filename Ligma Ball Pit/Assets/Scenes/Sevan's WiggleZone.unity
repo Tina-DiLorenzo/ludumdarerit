@@ -454,7 +454,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballPrefab: {fileID: 5138309625081054484, guid: a90954982167e4a43bc42d180b3caf46, type: 3}
   amountOfBalls: 200
-  ballsPerSecond: 0.08
+  ballsPerSecond: 0.02
+  range: 6
 --- !u!1 &646515148
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,6 +489,36 @@ Transform:
   - {fileID: 1475213861}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &813519155
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 813519156}
+  m_Layer: 0
+  m_Name: BallManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &813519156
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813519155}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1180138820
 GameObject:
@@ -726,7 +757,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558645724}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: -39.949, z: 0}
+  m_LocalPosition: {x: -12, y: -39.949, z: 0}
   m_LocalScale: {x: 90, y: 9600, z: 1}
   m_Children: []
   m_Father: {fileID: 646515149}
@@ -1011,7 +1042,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2120661433}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20, y: -39.949, z: 0}
+  m_LocalPosition: {x: 12, y: -39.949, z: 0}
   m_LocalScale: {x: 90, y: 9600, z: 1}
   m_Children: []
   m_Father: {fileID: 646515149}

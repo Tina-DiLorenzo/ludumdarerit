@@ -8,8 +8,10 @@ public class InitialSpawner : MonoBehaviour
     public int amountOfBalls = 10;
 
     public float ballsPerSecond = 0.5f;
+    public float range = 0.1f;
+
     private float timer = 0;
-    private float range = 0.1f;
+    
 
     void Start()
     {
@@ -26,8 +28,8 @@ public class InitialSpawner : MonoBehaviour
 
             Vector3 newPosition = transform.position;
             newPosition.x += Random.Range(-range, range);
-            newPosition.y += Random.Range(-range, range);
-            newBall.transform.position = transform.position;
+            //newPosition.y += Random.Range(-range, range);
+            newBall.transform.position = newPosition;
 
             timer = Time.realtimeSinceStartup + ballsPerSecond;
         }
