@@ -453,8 +453,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballPrefab: {fileID: 5138309625081054484, guid: a90954982167e4a43bc42d180b3caf46, type: 3}
-  amountOfBalls: 10
-  range: 10
+  amountOfBalls: 200
+  ballsPerSecond: 0.08
 --- !u!1 &646515148
 GameObject:
   m_ObjectHideFlags: 0

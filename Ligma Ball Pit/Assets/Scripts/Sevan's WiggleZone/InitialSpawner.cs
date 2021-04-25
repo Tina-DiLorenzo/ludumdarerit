@@ -6,10 +6,10 @@ public class InitialSpawner : MonoBehaviour
 {
     public GameObject ballPrefab;
     public int amountOfBalls = 10;
-    public float range = 10f;
 
-    private float ballsPerSecond = 0.5f;
+    public float ballsPerSecond = 0.5f;
     private float timer = 0;
+    private float range = 0.1f;
 
     void Start()
     {
@@ -24,6 +24,9 @@ public class InitialSpawner : MonoBehaviour
 
             GameObject newBall = Instantiate(ballPrefab);
 
+            Vector3 newPosition = transform.position;
+            newPosition.x += Random.Range(-range, range);
+            newPosition.y += Random.Range(-range, range);
             newBall.transform.position = transform.position;
 
             timer = Time.realtimeSinceStartup + ballsPerSecond;
