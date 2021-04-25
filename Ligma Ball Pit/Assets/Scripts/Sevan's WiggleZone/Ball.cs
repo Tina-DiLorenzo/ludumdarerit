@@ -12,7 +12,7 @@ public class Ball : MonoBehaviour
     public float randScaleMax = 1.2f;
 
 
-    private CircleCollider2D collider;
+    private new CircleCollider2D collider;
 
     void Start()
     {
