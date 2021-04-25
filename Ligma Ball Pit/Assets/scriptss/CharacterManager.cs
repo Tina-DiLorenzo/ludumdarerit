@@ -8,6 +8,7 @@ public class CharacterManager : MonoBehaviour
 {
     public static GameObject selected;
     public GameObject canvas;
+    public AudioSource sound;
 
 
     private void Update()
@@ -21,6 +22,7 @@ public class CharacterManager : MonoBehaviour
         if (selected != null)
         {
             PlayerMove.sprite = selected.GetComponent<Image>().sprite;
+            sound.Play();
             PlayerMove.running = true;
             Destroy(canvas);
         }
