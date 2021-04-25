@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InitialSpawner : MonoBehaviour
 {
+    public BallManager manager;
     public GameObject ballPrefab;
     public int amountOfBalls = 10;
 
@@ -30,6 +31,8 @@ public class InitialSpawner : MonoBehaviour
             newPosition.x += Random.Range(-range, range);
             //newPosition.y += Random.Range(-range, range);
             newBall.transform.position = newPosition;
+
+            manager.balls.Add(newBall);
 
             timer = Time.realtimeSinceStartup + ballsPerSecond;
         }

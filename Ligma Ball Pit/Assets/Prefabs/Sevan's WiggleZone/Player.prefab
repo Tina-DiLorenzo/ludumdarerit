@@ -119,8 +119,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.001, y: 0.009999999}
+  m_Offset: {x: 0, y: 0.001}
+  m_Size: {x: 0.001, y: 0.0095}
   m_Direction: 0
 --- !u!114 &7459044473620446671
 MonoBehaviour:
@@ -136,5 +136,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
   playerBody: {fileID: 7459044473620446665}
-  wiggleThresh: 3
+  wiggleRange: 0.4
   wiggleForce: 30

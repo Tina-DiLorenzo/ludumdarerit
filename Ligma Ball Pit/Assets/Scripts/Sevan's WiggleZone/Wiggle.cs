@@ -6,7 +6,7 @@ public class Wiggle : MonoBehaviour
 {
     public new Camera camera;
     public Rigidbody2D playerBody;
-    public float wiggleThresh = 1f;
+    public float wiggleRange = 0.2f;
     public float wiggleForce = 40f;
 
     private Vector3 mousePosition;
@@ -45,7 +45,7 @@ public class Wiggle : MonoBehaviour
         //}
 
         Vector3 forcePosition = gameObject.transform.position + gameObject.transform.up * -0.8f;
-        forcePosition += gameObject.transform.right * Random.Range(-0.2f, 0.2f);
+        forcePosition += gameObject.transform.right * Random.Range(-wiggleRange, wiggleRange);
         if (Input.GetMouseButton(0))
         {
             playerBody.AddForceAtPosition(wiggleForce * direction, forcePosition);
