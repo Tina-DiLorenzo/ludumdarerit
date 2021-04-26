@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class InitialSpawner : MonoBehaviour
 {
+    public BallManager manager;
     public GameObject ballPrefab;
     public int amountOfBalls = 10;
-    public float range = 10f;
 
-    private float ballsPerSecond = 0.5f;
+    public float ballsPerSecond = 0.5f;
+    public float range = 0.1f;
+
     private float timer = 0;
+    
 
     void Start()
     {
@@ -24,7 +27,12 @@ public class InitialSpawner : MonoBehaviour
 
             GameObject newBall = Instantiate(ballPrefab);
 
-            newBall.transform.position = transform.position;
+            Vector3 newPosition = transform.position;
+            newPosition.x += Random.Range(-range, range);
+            //newPosition.y += Random.Range(-range, range);
+            newBall.transform.position = newPosition;
+
+            manager.balls.Add(newBall.GetComponent<Ball>());
 
             timer = Time.realtimeSinceStartup + ballsPerSecond;
         }

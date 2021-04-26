@@ -6,7 +6,8 @@ public class Wiggle : MonoBehaviour
 {
     public new Camera camera;
     public Rigidbody2D playerBody;
-    public float wiggleThresh = 1f;
+    public float wiggleRange = 0.2f;
+    public float wiggleForce = 40f;
 
     private Vector3 mousePosition;
     private Vector3 worldPosition;
@@ -31,20 +32,23 @@ public class Wiggle : MonoBehaviour
 
         delta = worldPosition - lastPos;
 
-        float velocity = delta.magnitude * 40f;
+        float force = delta.magnitude * wiggleForce;
 
 
         Vector3 direction = worldPosition - transform.position;
         direction = direction.normalized;
 
 
-        if (velocity > wiggleThresh)
+        //if (force > wiggleThresh)
+        //{
+        //    playerBody.AddForceAtPosition(force * direction, gameObject.transform.position + gameObject.transform.up * -0.8f);
+        //}
+
+        Vector3 forcePosition = gameObject.transform.position + gameObject.transform.up * -0.8f;
+        forcePosition += gameObject.transform.right * Random.Range(-wiggleRange, wiggleRange);
+        if (Input.GetMouseButton(0))
         {
-            playerBody.AddForceAtPosition(velocity * direction, gameObject.transform.position + gameObject.transform.up * -0.7f);
-        }
-        else if (Input.GetMouseButton(0))
-        {
-            playerBody.AddForceAtPosition(20f * direction, gameObject.transform.position + gameObject.transform.up * -0.7f);
+            playerBody.AddForceAtPosition(wiggleForce * direction, forcePosition);
         }
         lastPos = worldPosition;
     }

@@ -372,6 +372,11 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &262319607 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7459044473620446660, guid: e1d529cdf4bebd548bb113e517926dac, type: 3}
+  m_PrefabInstance: {fileID: 7459044473693933619}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &262319609 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7459044473620446666, guid: e1d529cdf4bebd548bb113e517926dac, type: 3}
@@ -452,9 +457,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9e3f339eae072f4293775b91927ff84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 813519157}
   ballPrefab: {fileID: 5138309625081054484, guid: a90954982167e4a43bc42d180b3caf46, type: 3}
-  amountOfBalls: 10
-  range: 10
+  amountOfBalls: 200
+  ballsPerSecond: 0.02
+  range: 6
 --- !u!1 &646515148
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,6 +496,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &813519155
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 813519156}
+  - component: {fileID: 813519157}
+  m_Layer: 0
+  m_Name: BallManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &813519156
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813519155}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &813519157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813519155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d599092bf5cbf7b408167ac9fe14b179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 262319607}
+  balls: []
+  freezeRange: 20
 --- !u!1 &1180138820
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,7 +779,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558645724}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20, y: -39.949, z: 0}
+  m_LocalPosition: {x: -12, y: -39.949, z: 0}
   m_LocalScale: {x: 90, y: 9600, z: 1}
   m_Children: []
   m_Father: {fileID: 646515149}
@@ -1011,7 +1064,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2120661433}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20, y: -39.949, z: 0}
+  m_LocalPosition: {x: 12, y: -39.949, z: 0}
   m_LocalScale: {x: 90, y: 9600, z: 1}
   m_Children: []
   m_Father: {fileID: 646515149}
@@ -1186,5 +1239,9 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 226482852}
+    - target: {fileID: 7459044473620446671, guid: e1d529cdf4bebd548bb113e517926dac, type: 3}
+      propertyPath: wiggleForce
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1d529cdf4bebd548bb113e517926dac, type: 3}
