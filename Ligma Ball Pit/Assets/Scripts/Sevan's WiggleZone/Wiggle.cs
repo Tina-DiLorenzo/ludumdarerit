@@ -48,7 +48,7 @@ public class Wiggle : MonoBehaviour
         forcePosition += gameObject.transform.right * Random.Range(-wiggleRange, wiggleRange);
         if (Input.GetMouseButton(0))
         {
-            playerBody.AddForceAtPosition(wiggleForce * direction, forcePosition);
+            playerBody.AddForceAtPosition(wiggleForce * direction * Time.deltaTime, forcePosition);
         }
         lastPos = worldPosition;
     }

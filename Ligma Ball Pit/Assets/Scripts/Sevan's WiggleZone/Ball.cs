@@ -7,12 +7,14 @@ public class Ball : MonoBehaviour
 
 
     public SpriteRenderer sprite;
+    public GameObject spriteHolder;
     public Rigidbody2D body;
 
     public float randScaleMin = 0.7f;
     public float randScaleMax = 1.2f;
 
-
+    public float shakeValue = 0f;
+   
     private new CircleCollider2D collider;
 
     void Start()
@@ -31,6 +33,6 @@ public class Ball : MonoBehaviour
 
     void Update()
     {
-
+        spriteHolder.transform.localPosition = new Vector3(Random.Range(-shakeValue, shakeValue), Random.Range(-shakeValue, shakeValue), sprite.transform.localPosition.z);
     }
 }
