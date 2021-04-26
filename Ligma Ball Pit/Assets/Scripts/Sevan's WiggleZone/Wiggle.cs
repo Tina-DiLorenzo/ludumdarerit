@@ -15,6 +15,9 @@ public class Wiggle : MonoBehaviour
     private Vector3 lastPos;
     private Vector3 delta;
     private int collideCount = 0;
+
+    public float maxSpeed;
+    private Vector3 currentVel = Vector3.zero;
     void Start()
     {
         
@@ -48,6 +51,10 @@ public class Wiggle : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             playerBody.AddForceAtPosition(wiggleForce * direction * Time.deltaTime, forcePosition);
+            
+            //clamping the velocity
+            currentVel = new Vector3(Mathf.Clamp(playerBody.velocity.x, -maxSpeed, maxSpeed), Mathf.Clamp(playerBody.velocity.y, -maxSpeed, maxSpeed), Mathf.Clamp(playerBody.velocity.x, -maxSpeed, maxSpeed));
+            playerBody.velocity = currentVel;
         }
         lastPos = worldPosition;
     }
