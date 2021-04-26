@@ -736,7 +736,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1180138821
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1424,6 +1424,10 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 226482852}
+    - target: {fileID: 7459044473620446671, guid: e1d529cdf4bebd548bb113e517926dac, type: 3}
+      propertyPath: maxSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7459044473620446671, guid: e1d529cdf4bebd548bb113e517926dac, type: 3}
       propertyPath: wiggleForce
       value: 5600
