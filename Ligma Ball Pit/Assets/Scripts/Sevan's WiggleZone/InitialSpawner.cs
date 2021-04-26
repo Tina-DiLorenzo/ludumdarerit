@@ -13,12 +13,6 @@ public class InitialSpawner : MonoBehaviour
 
     private float timer = 0;
     
-
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         if (timer < Time.realtimeSinceStartup && amountOfBalls > 0)
@@ -29,7 +23,7 @@ public class InitialSpawner : MonoBehaviour
 
             Vector3 newPosition = transform.position;
             newPosition.x += Random.Range(-range, range);
-            //newPosition.y += Random.Range(-range, range);
+
             newBall.transform.position = newPosition;
 
             manager.balls.Add(newBall.GetComponent<Ball>());
