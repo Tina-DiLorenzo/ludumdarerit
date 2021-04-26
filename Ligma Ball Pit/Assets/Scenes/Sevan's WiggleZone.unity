@@ -150,8 +150,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78980826}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -86.42, z: 0}
-  m_LocalScale: {x: 2417.1462, y: 91, z: 1}
+  m_LocalPosition: {x: 0, y: -86.53, z: 0}
+  m_LocalScale: {x: 2625.746, y: 91, z: 1}
   m_Children: []
   m_Father: {fileID: 646515149}
   m_RootOrder: 2
@@ -465,6 +465,54 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7459044473620446666, guid: e1d529cdf4bebd548bb113e517926dac, type: 3}
   m_PrefabInstance: {fileID: 7459044473693933619}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &507193128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 507193130}
+  - component: {fileID: 507193129}
+  m_Layer: 0
+  m_Name: InitialSpawner 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &507193129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507193128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9e3f339eae072f4293775b91927ff84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 813519157}
+  ballPrefab: {fileID: 5138309625081054484, guid: a90954982167e4a43bc42d180b3caf46, type: 3}
+  amountOfBalls: 400
+  ballsPerSecond: 0.02
+  range: 6
+--- !u!4 &507193130
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507193128}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -60.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &544458220
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,7 +570,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 548721943}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -18.8, z: 0}
+  m_LocalPosition: {x: 0, y: -29.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -542,7 +590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 813519157}
   ballPrefab: {fileID: 5138309625081054484, guid: a90954982167e4a43bc42d180b3caf46, type: 3}
-  amountOfBalls: 1000
+  amountOfBalls: 400
   ballsPerSecond: 0.02
   range: 6
 --- !u!1 &593165749
@@ -872,7 +920,7 @@ Transform:
   m_GameObject: {fileID: 1475213860}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 6.87, z: 0}
-  m_LocalScale: {x: 2404.6992, y: 91, z: 1}
+  m_LocalScale: {x: 2605.0107, y: 91, z: 1}
   m_Children: []
   m_Father: {fileID: 646515149}
   m_RootOrder: 3
@@ -1002,7 +1050,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558645724}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12, y: -39.949, z: 0}
+  m_LocalPosition: {x: -13, y: -39.949, z: 0}
   m_LocalScale: {x: 90, y: 9600, z: 1}
   m_Children: []
   m_Father: {fileID: 646515149}
@@ -1287,7 +1335,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2120661433}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12, y: -39.949, z: 0}
+  m_LocalPosition: {x: 13, y: -39.949, z: 0}
   m_LocalScale: {x: 90, y: 9600, z: 1}
   m_Children: []
   m_Father: {fileID: 646515149}
@@ -1469,6 +1517,10 @@ PrefabInstance:
     - target: {fileID: 7459044473620446671, guid: e1d529cdf4bebd548bb113e517926dac, type: 3}
       propertyPath: wiggleForce
       value: 5500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459044473620446671, guid: e1d529cdf4bebd548bb113e517926dac, type: 3}
+      propertyPath: wiggleRange
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1d529cdf4bebd548bb113e517926dac, type: 3}

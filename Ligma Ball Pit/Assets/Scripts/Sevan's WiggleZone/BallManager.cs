@@ -29,14 +29,14 @@ public class BallManager : MonoBehaviour
             ball.body.gravityScale = 0.7f;
         }
 
-        if (length > lowGravityRange*3f)
-		{
-            ball.enabled = false;
-		}
-        else
-		{
-            ball.enabled = true;
-        }
+        //if (length > lowGravityRange*6f)
+		//{
+        //    ball.body.Sleep();
+		//}
+        //else
+		//{
+        //    ball.body.WakeUp();
+        //}
     }
 
     void UpdateShakeValues(Ball ball)
@@ -66,4 +66,5 @@ public class BallManager : MonoBehaviour
             UpdateShakeValues(balls[i]);
         }
     }
+
 }

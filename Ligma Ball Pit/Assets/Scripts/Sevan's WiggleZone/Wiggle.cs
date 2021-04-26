@@ -13,6 +13,7 @@ public class Wiggle : MonoBehaviour
     private Vector3 worldPosition;
     private Vector3 lastPos;
     private Vector3 delta;
+    private int collideCount = 0;
     void Start()
     {
         mousePosition = Vector3.zero;
@@ -25,6 +26,7 @@ public class Wiggle : MonoBehaviour
 
     void Update()
     {
+        if (collideCount > 0) { return; }
         mousePosition = Input.mousePosition;
         mousePosition.z = camera.nearClipPlane;
         worldPosition = camera.ScreenToWorldPoint(mousePosition);
