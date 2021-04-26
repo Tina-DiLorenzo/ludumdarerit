@@ -22,6 +22,8 @@ public class CharacterSelect : MonoBehaviour
     public float alpha = 170f;
     private Color color;
     private Color colorChanged;
+    private AudioSource sound;
+    public float soundVelo = 2f;
 
     public float radius = 20;
 
@@ -36,6 +38,7 @@ public class CharacterSelect : MonoBehaviour
         colorChanged = color;
         colorChanged.a = 0;
         accel = 0;
+        sound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -63,9 +66,22 @@ public class CharacterSelect : MonoBehaviour
         if (velo < -maxVelo) velo = -maxVelo;
         pos.x += velo;
 
+        if (Mathf.Abs(velo) > soundVelo)
+        {
+            if (!sound.isPlaying)
+            {
+                sound.Play();
+            }
+        }
+        else
+        {
+            sound.Stop();
+        }
+
         //Dont go too far! Sets bounds
         if (pos.x > 1800)
         {
+            sound.Stop();
             arrows[1].color = colorChanged; //arrow is transparent!
             pos.x = 1800;
             accel = 0;
@@ -73,6 +89,7 @@ public class CharacterSelect : MonoBehaviour
         }
         else if (pos.x < 100)
         {
+            sound.Stop();
             arrows[0].color = colorChanged; //arrow is transparent!
             pos.x = 100;
             accel = 0;
