@@ -39,11 +39,6 @@ public class Wiggle : MonoBehaviour
         direction = direction.normalized;
 
 
-        //if (force > wiggleThresh)
-        //{
-        //    playerBody.AddForceAtPosition(force * direction, gameObject.transform.position + gameObject.transform.up * -0.8f);
-        //}
-
         Vector3 forcePosition = gameObject.transform.position + gameObject.transform.up * -0.8f;
         forcePosition += gameObject.transform.right * Random.Range(-wiggleRange, wiggleRange);
         if (Input.GetMouseButton(0))

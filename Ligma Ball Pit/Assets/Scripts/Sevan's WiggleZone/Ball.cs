@@ -19,9 +19,7 @@ public class Ball : MonoBehaviour
 
     void Start()
     {
-        // Temp color
-        // sprite.color = new Color(Random.Range(0.1f, 1f), Random.Range(0.1f, 1f), Random.Range(0.1f, 1f), 1f);
-       
+
         collider = GetComponent<CircleCollider2D>();
 
         Vector3 newScale = transform.localScale;

@@ -7,7 +7,7 @@ public class BallManager : MonoBehaviour
     public GameObject player;
     public GameObject hand;
     public List<Ball> balls;
-    public float lowGravityRange = 200f;
+    public float lowGravityRange = 60f;
     void Start()
     {
         balls = new List<Ball>();
@@ -22,14 +22,20 @@ public class BallManager : MonoBehaviour
         if (length > lowGravityRange)
         {
 
-            ball.body.gravityScale = 0.1f;
-            //balls[i].gameObject.GetComponent<SpriteRenderer>().color = new Color(0.1f, 1f, 0.1f);
-
+            ball.body.gravityScale = 0.08f;
         }
         else
         {
             ball.body.gravityScale = 0.7f;
-            //balls[i].gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f);
+        }
+
+        if (length > lowGravityRange*3f)
+		{
+            ball.enabled = false;
+		}
+        else
+		{
+            ball.enabled = true;
         }
     }
 
