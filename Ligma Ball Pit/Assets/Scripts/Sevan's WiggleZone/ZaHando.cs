@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class ZaHando : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    public GameObject player;
+    public float speed;
     void Update()
     {
-        
+        gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, player.transform.position, speed * Time.deltaTime);
     }
 }

@@ -5,30 +5,57 @@ using UnityEngine;
 public class BallManager : MonoBehaviour
 {
     public GameObject player;
+    public GameObject hand;
     public List<Ball> balls;
-    public float freezeRange = 2400f;
+    public float lowGravityRange = 60f;
     void Start()
     {
         balls = new List<Ball>();
+    }
+
+
+    void GravityCheck(Ball ball)
+	{
+        Vector3 distance = ball.gameObject.transform.position - player.transform.position;
+        float length = distance.sqrMagnitude;
+
+        if (length > lowGravityRange)
+        {
+
+            ball.body.gravityScale = 0.2f;
+        }
+        else
+        {
+            ball.body.gravityScale = 0.5f;
+        }
+    }
+
+    void UpdateShakeValues(Ball ball)
+	{
+        Vector3 distance = ball.gameObject.transform.position - hand.transform.position;
+        float length = distance.sqrMagnitude;
+
+		if (length < 10f)
+		{
+            ball.shakeValue = 0.05f;
+		}
+        else if (length < 5f)
+		{
+            ball.shakeValue = 0.2f*(length/5f);
+        }
+        else
+		{
+            ball.shakeValue = 0f;
+        }
     }
 
     void Update()
     {
 		for (int i = 0; i < balls.Count; i++)
 		{
-            Vector3 distance = transform.position - player.transform.position;
-            float length = distance.sqrMagnitude;
-            
-            if (length < freezeRange)
-			{
-
-                balls[i].body.gravityScale = 0.1f;
-
-			}
-            else
-			{
-                balls[i].body.gravityScale = 0.7f;
-            }
+            GravityCheck(balls[i]);
+            UpdateShakeValues(balls[i]);
         }
     }
+
 }
