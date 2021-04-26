@@ -8,6 +8,7 @@ public class Wiggle : MonoBehaviour
     public Rigidbody2D playerBody;
     public float wiggleRange = 0.2f;
     public float wiggleForce = 40f;
+    
 
     private Vector3 mousePosition;
     private Vector3 worldPosition;
@@ -16,6 +17,7 @@ public class Wiggle : MonoBehaviour
     private int collideCount = 0;
     void Start()
     {
+        
         mousePosition = Vector3.zero;
         worldPosition = Vector3.zero;
         lastPos = Vector3.zero;

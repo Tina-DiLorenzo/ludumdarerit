@@ -22,21 +22,12 @@ public class BallManager : MonoBehaviour
         if (length > lowGravityRange)
         {
 
-            ball.body.gravityScale = 0.08f;
+            ball.body.gravityScale = 0.2f;
         }
         else
         {
-            ball.body.gravityScale = 0.7f;
+            ball.body.gravityScale = 0.5f;
         }
-
-        //if (length > lowGravityRange*6f)
-		//{
-        //    ball.body.Sleep();
-		//}
-        //else
-		//{
-        //    ball.body.WakeUp();
-        //}
     }
 
     void UpdateShakeValues(Ball ball)
