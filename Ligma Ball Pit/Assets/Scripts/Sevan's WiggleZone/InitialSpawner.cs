@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InitialSpawner : MonoBehaviour
 {
     public BallManager manager;
+    public GameObject stand;
     public GameObject ballPrefab;
+    public Text loading;
+    public CanvasGroup group;
     public int amountOfBalls = 10;
 
     public float ballsPerSecond = 0.5f;
@@ -29,6 +33,16 @@ public class InitialSpawner : MonoBehaviour
             manager.balls.Add(newBall.GetComponent<Ball>());
 
             timer = Time.realtimeSinceStartup + ballsPerSecond;
+        }
+
+        if(amountOfBalls <= 0 && stand != null)
+        {
+            group.alpha = 0;
+            Destroy(stand);
+        }
+        else
+        {
+            loading.text = (100-(amountOfBalls / 100)).ToString() + "%";
         }
     }
 }
