@@ -205,4 +205,11 @@ public class ObjectManager : MonoBehaviour
 
         return false;
     }
+
+    void OnGUI()
+    {
+        string message = "Score : " + totalPoints;
+        GUILayout.TextArea(message);
+        GUI.skin.box.wordWrap = true;
+    }
 }
