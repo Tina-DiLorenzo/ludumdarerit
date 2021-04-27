@@ -8,52 +8,59 @@ public class CollectableObject : MonoBehaviour
     public enum ItemType
     {
         pointIncrease,
-        flashbang,
-        stickyCaltrops
+        stickyCaltrops,
+        gameWinningObject
 
     }
+    // Enum to represent the Item Type
     public ItemType thisItem;
-    private int pointValue;
+
+    // The value of points that the item awards
+    public int pointValue;
+    
+    // Wether or no the item is set to its correct sprite/point value
     private Vector3 pos;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        // Set the items sprite and other fields based on the enum type
-        switch(thisItem)
-        {
-            case ItemType.pointIncrease:
-                pointValue = 10;
-                break;
-            case ItemType.flashbang:
-                pointValue = 5;
-                break;
-            case ItemType.stickyCaltrops:
-                pointValue = 5;
-                break;
-        }
+    
+    }
+
+    public void InitializeItem(ItemType newItemTpye)
+    {
+        thisItem = newItemTpye;
+     
+            // Set the individual point value and sprite
+            switch (thisItem)
+            {
+                case ItemType.pointIncrease:
+                    pointValue = 10;
+                    break;
+                case ItemType.gameWinningObject:
+                    pointValue = 0;
+                    break;
+                case ItemType.stickyCaltrops:
+                    pointValue = 5;
+                    break;
+            }
+
+        
     }
 
     // Called by the item manager whenever an item is picked up by the player
-   public void CollisionEvent()
+    // Score increas is handled by the object manager
+    public void CollisionEvent()
    {
-        // When point
-        PointIncrease();
         switch (thisItem)
         {
             case ItemType.pointIncrease:
                 break;
-            case ItemType.flashbang:
+            case ItemType.gameWinningObject:
                 break;
             case ItemType.stickyCaltrops:
                 break;
         }
    }
-
-    // Increase the point score 
-    void PointIncrease()
-    {
-
-    }
 }

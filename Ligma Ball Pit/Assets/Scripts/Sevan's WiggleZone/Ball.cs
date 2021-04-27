@@ -9,18 +9,19 @@ public class Ball : MonoBehaviour
     public SpriteRenderer sprite;
     public GameObject spriteHolder;
     public Rigidbody2D body;
+    public List<Sprite> spriteList = new List<Sprite>();
 
     public float randScaleMin = 0.7f;
     public float randScaleMax = 1.2f;
 
     public float shakeValue = 0f;
-   
+
     private new CircleCollider2D collider;
 
     void Start()
     {
-
         collider = GetComponent<CircleCollider2D>();
+        sprite.sprite = spriteList[Random.Range(0, 6)];
 
         Vector3 newScale = transform.localScale;
         float randScale = Random.Range(randScaleMin, randScaleMax);

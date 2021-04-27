@@ -22,20 +22,11 @@ public class BallManager : MonoBehaviour
         if (length > lowGravityRange)
         {
 
-            ball.body.gravityScale = 0.08f;
+            ball.body.gravityScale = 0.2f;
         }
         else
         {
-            ball.body.gravityScale = 0.7f;
-        }
-
-        if (length > lowGravityRange*3f)
-		{
-            ball.enabled = false;
-		}
-        else
-		{
-            ball.enabled = true;
+            ball.body.gravityScale = 0.5f;
         }
     }
 
@@ -66,4 +57,5 @@ public class BallManager : MonoBehaviour
             UpdateShakeValues(balls[i]);
         }
     }
+
 }
