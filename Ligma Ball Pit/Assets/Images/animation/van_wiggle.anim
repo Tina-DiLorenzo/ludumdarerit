@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: tinaWiggle
+  m_Name: van_wiggle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -19,12 +19,12 @@ AnimationClip:
   m_FloatCurves: []
   m_PPtrCurves:
   - curve:
-    - time: 0.016666668
-      value: {fileID: 188810067182076412, guid: ae6b59e9d4b8ac341ab6bed4740e5e32, type: 3}
-    - time: 0.16666667
-      value: {fileID: 9216057024887962260, guid: ae6b59e9d4b8ac341ab6bed4740e5e32, type: 3}
-    - time: 0.26666668
-      value: {fileID: 9216057024887962260, guid: ae6b59e9d4b8ac341ab6bed4740e5e32, type: 3}
+    - time: 0
+      value: {fileID: 2421074115729983268, guid: 0fd1fcb87949f2e47a31b4dd76c4638a, type: 3}
+    - time: 0.21666667
+      value: {fileID: -843835901848179862, guid: 0fd1fcb87949f2e47a31b4dd76c4638a, type: 3}
+    - time: 0.4
+      value: {fileID: 2421074115729983268, guid: 0fd1fcb87949f2e47a31b4dd76c4638a, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,15 +44,15 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 188810067182076412, guid: ae6b59e9d4b8ac341ab6bed4740e5e32, type: 3}
-    - {fileID: 9216057024887962260, guid: ae6b59e9d4b8ac341ab6bed4740e5e32, type: 3}
-    - {fileID: 9216057024887962260, guid: ae6b59e9d4b8ac341ab6bed4740e5e32, type: 3}
+    - {fileID: 2421074115729983268, guid: 0fd1fcb87949f2e47a31b4dd76c4638a, type: 3}
+    - {fileID: -843835901848179862, guid: 0fd1fcb87949f2e47a31b4dd76c4638a, type: 3}
+    - {fileID: 2421074115729983268, guid: 0fd1fcb87949f2e47a31b4dd76c4638a, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.28333336
+    m_StopTime: 0.4166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

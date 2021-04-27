@@ -9,6 +9,7 @@ public class CharacterManager : MonoBehaviour
     public static GameObject selected;
     public GameObject canvas;
     public AudioSource sound;
+    public KeepName saveName;
 
 
     private void Update()
@@ -21,6 +22,7 @@ public class CharacterManager : MonoBehaviour
     {
         if (selected != null)
         {
+            saveName.SetName(selected.name);
             PlayerMove.sprite = selected.GetComponent<Image>().sprite;
             sound.Play();
             PlayerMove.running = true;
