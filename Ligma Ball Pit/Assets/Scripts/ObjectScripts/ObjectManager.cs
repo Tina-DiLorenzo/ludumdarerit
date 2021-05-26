@@ -151,6 +151,7 @@ public class ObjectManager : MonoBehaviour
 
     // Check Collision between the hand and a trap
     // Uses AABB collision
+<<<<<<< HEAD
     //bool TrapTriggered(GameObject trapItem)
     //{
     //    Bounds itemBounds = trapItem.GetComponent<SpriteRenderer>().bounds;
@@ -176,4 +177,23 @@ public class ObjectManager : MonoBehaviour
     //    GUI.skin.box.wordWrap = true;
     //}
 >>>>>>> 0767f333ad4fd4b14e24ec8084fb916d835b411e
+=======
+    bool TrapTriggered(GameObject trapItem)
+    {
+        Bounds itemBounds = trapItem.GetComponent<SpriteRenderer>().bounds;
+        Bounds HandBounds = handReference.GetComponent<SpriteRenderer>().bounds;
+
+
+        // Check all the sides if they're overlapping
+        if (itemBounds.max.y > HandBounds.min.y
+            && itemBounds.min.y < HandBounds.max.y
+            && itemBounds.max.x > HandBounds.min.x
+            && itemBounds.min.x < HandBounds.max.x)
+        {
+            return true;
+        }
+
+        return false;
+    }
+>>>>>>> parent of 4ef43ca (Updated stuff)
 }
