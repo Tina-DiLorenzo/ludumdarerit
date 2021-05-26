@@ -9,6 +9,7 @@ public class ObjectManager : MonoBehaviour
     
     public GameObject itemPrefab;
     public GameObject playerPrefab;
+    public GameObject handReference;
     public Rect pitCorrdinate;
     public int totalItems = 5;
     private int totalPoints;
@@ -52,15 +53,54 @@ public class ObjectManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // for all of the items spawned
-        foreach (GameObject i in itemsList)
+        // Spawn new items if none are spawn
+        if(itemsList.Count == 0)
         {
-            // If the player made contact with one of the items trigger it's affect 
-            if(CollisionOccured(i))
+            SpawnAllItems();
+        }
+        
+        // for all of the items spawned
+        for (int i = 0; i < itemsList.Count; i++)
+        {
+            
+            // If the item is a trap that was triggered by the hand
+            if (TrapTriggered(itemsList[i]) && itemsList[i].GetComponent<CollectableObject>().thisItem != CollectableObject.ItemType.stickyCaltrops)
             {
-                i.GetComponent<CollectableObject>().CollisionEvent();
-                totalPoints += PointIncrease(i);
+                itemsList[i].GetComponent<CollectableObject>().CollisionEvent();
+                itemsList[i].GetComponent<SpriteRenderer>().sprite = itemSprites[(int)itemsList[i].GetComponent<CollectableObject>().thisItem];
+                // Slow down the hand from the sticky caltrop
+                
+                
+                // Destroy the caltrop
+                itemsList.Remove(itemsList[i]);
+                Destroy(itemsList[i]);
+                i--;
             }
+
+            // If the player made contact with one of the items trigger it's affect
+            if (CollisionOccured(itemsList[i]))
+            {
+                itemsList[i].GetComponent<CollectableObject>().CollisionEvent();
+                totalPoints += PointIncrease(itemsList[i]);
+
+
+                // If collision occured with an item remove it from the list and distroy it
+                // If a tap item was picked up by a player "activate it"
+                if (itemsList[i].GetComponent<CollectableObject>().thisItem != CollectableObject.ItemType.stickyCaltrops)
+                {
+                    itemsList.Remove(itemsList[i]);
+                    Destroy(itemsList[i]);
+                    i--;
+
+                }
+                else
+                {
+                    itemsList[i].GetComponent<CollectableObject>().InitializeItem(CollectableObject.ItemType.chewedGum);
+                    itemsList[i].GetComponent<SpriteRenderer>().sprite = itemSprites[(int)itemsList[i].GetComponent<CollectableObject>().thisItem];
+                }
+            }
+
+            
         }
     }
  
@@ -71,7 +111,7 @@ public class ObjectManager : MonoBehaviour
         for (int i = 0; i < totalItems; i++)
         {
             // Generate an item enum type, does not include the final win game object
-            int itemEnum = Random.Range(0, (itemSprites.Length-1));
+            int itemEnum = Random.Range(0, (itemSprites.Length-2));
 
             // Generate a specific item based on the type generated
             GameObject generatedItem = generateItem((CollectableObject.ItemType)itemEnum);
@@ -96,7 +136,7 @@ public class ObjectManager : MonoBehaviour
         GameObject itemToSpawn = itemPrefab;
         
         // Set the sprite of the item to spawn coresponds to the enumerable value passed in
-       // itemToSpawn.GetComponent<SpriteRenderer>().sprite = itemSprites[(int)spawnItemType];
+        itemToSpawn.GetComponent<SpriteRenderer>().sprite = itemSprites[(int)spawnItemType];
 
         // Set the point value and type of the item to spawn coresponding to the enumerable value passed in
         itemToSpawn.GetComponent<CollectableObject>().InitializeItem(spawnItemType);
@@ -139,6 +179,26 @@ public class ObjectManager : MonoBehaviour
             && itemBounds.min.y < playerBounds.max.y
             && itemBounds.max.x > playerBounds.min.x
             && itemBounds.min.x < playerBounds.max.x)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    // Check Collision between the hand and a trap
+    // Uses AABB collision
+    bool TrapTriggered(GameObject trapItem)
+    {
+        Bounds itemBounds = trapItem.GetComponent<SpriteRenderer>().bounds;
+        Bounds HandBounds = handReference.GetComponent<SpriteRenderer>().bounds;
+
+
+        // Check all the sides if they're overlapping
+        if (itemBounds.max.y > HandBounds.min.y
+            && itemBounds.min.y < HandBounds.max.y
+            && itemBounds.max.x > HandBounds.min.x
+            && itemBounds.min.x < HandBounds.max.x)
         {
             return true;
         }
