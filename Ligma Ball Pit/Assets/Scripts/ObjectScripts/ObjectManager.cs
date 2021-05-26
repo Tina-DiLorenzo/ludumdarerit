@@ -196,9 +196,6 @@ public class ObjectManager : MonoBehaviour
         return false;
     }
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 4ef43ca (Updated stuff)
-=======
 >>>>>>> parent of 4ef43ca (Updated stuff)
 =======
 >>>>>>> parent of 4ef43ca (Updated stuff)
