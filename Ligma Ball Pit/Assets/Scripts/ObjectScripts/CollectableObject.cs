@@ -59,7 +59,10 @@ public class CollectableObject : MonoBehaviour
                 break;
             case ItemType.gameWinningObject:
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 4ef43ca (Updated stuff)
                 break;
             case ItemType.chewedGum:
 >>>>>>> parent of 4ef43ca (Updated stuff)
