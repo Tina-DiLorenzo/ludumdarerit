@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CollectableObject : MonoBehaviour
 {
@@ -57,7 +58,8 @@ public class CollectableObject : MonoBehaviour
         {
             case ItemType.pointIncrease:
                 break;
-            case ItemType.gameWinningObject:
+            case ItemType.gameWinningObject: 
+                SceneManager.LoadScene(0);
                 break;
             case ItemType.stickyCaltrops:
                 break;
