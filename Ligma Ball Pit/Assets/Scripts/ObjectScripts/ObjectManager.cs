@@ -143,34 +143,37 @@ public class ObjectManager : MonoBehaviour
 
         return false;
     }
+
+//this is an error that is commented out for now
+//- Van
 <<<<<<< HEAD
 =======
 
     // Check Collision between the hand and a trap
     // Uses AABB collision
-    bool TrapTriggered(GameObject trapItem)
-    {
-        Bounds itemBounds = trapItem.GetComponent<SpriteRenderer>().bounds;
-        Bounds HandBounds = handReference.GetComponent<SpriteRenderer>().bounds;
+    //bool TrapTriggered(GameObject trapItem)
+    //{
+    //    Bounds itemBounds = trapItem.GetComponent<SpriteRenderer>().bounds;
+    //    Bounds HandBounds = handReference.GetComponent<SpriteRenderer>().bounds;
 
 
-        // Check all the sides if they're overlapping
-        if (itemBounds.max.y > HandBounds.min.y
-            && itemBounds.min.y < HandBounds.max.y
-            && itemBounds.max.x > HandBounds.min.x
-            && itemBounds.min.x < HandBounds.max.x)
-        {
-            return true;
-        }
+    //    // Check all the sides if they're overlapping
+    //    if (itemBounds.max.y > HandBounds.min.y
+    //        && itemBounds.min.y < HandBounds.max.y
+    //        && itemBounds.max.x > HandBounds.min.x
+    //        && itemBounds.min.x < HandBounds.max.x)
+    //    {
+    //        return true;
+    //    }
 
-        return false;
-    }
+    //    return false;
+    //}
 
-    void OnGUI()
-    {
-        string message = "Score : " + totalPoints;
-        GUILayout.TextArea(message);
-        GUI.skin.box.wordWrap = true;
-    }
+    //void OnGUI()
+    //{
+    //    string message = "Score : " + totalPoints;
+    //    GUILayout.TextArea(message);
+    //    GUI.skin.box.wordWrap = true;
+    //}
 >>>>>>> 0767f333ad4fd4b14e24ec8084fb916d835b411e
 }
