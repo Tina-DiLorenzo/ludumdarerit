@@ -9,8 +9,8 @@ public class CollectableObject : MonoBehaviour
     {
         pointIncrease,
         stickyCaltrops,
-        chewedGum,
         gameWinningObject
+
     }
     // Enum to represent the Item Type
     public ItemType thisItem;
@@ -21,6 +21,12 @@ public class CollectableObject : MonoBehaviour
     // Wether or no the item is set to its correct sprite/point value
     private Vector3 pos;
     
+
+    // Start is called before the first frame update
+    void Start()
+    {
+    
+    }
 
     public void InitializeItem(ItemType newItemTpye)
     {
@@ -33,9 +39,6 @@ public class CollectableObject : MonoBehaviour
                     pointValue = 10;
                     break;
                 case ItemType.gameWinningObject:
-                    pointValue = 0;
-                    break;
-                case ItemType.chewedGum:
                     pointValue = 0;
                     break;
                 case ItemType.stickyCaltrops:
@@ -56,13 +59,8 @@ public class CollectableObject : MonoBehaviour
                 break;
             case ItemType.gameWinningObject:
                 break;
-            case ItemType.chewedGum:
-                break;
             case ItemType.stickyCaltrops:
-                InitializeItem(ItemType.chewedGum);
                 break;
-            
-
         }
    }
 }
