@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WinLoseManager : MonoBehaviour
+public class MainGameManager : MonoBehaviour
 {
+    public Transform hand;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,10 @@ public class WinLoseManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void TriggerLose()
+    {
+
     }
 }
