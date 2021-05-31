@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemManager : MonoBehaviour
 {
     //width and height of range items can spawn
-    public Vector3 spawnBounds = new Vector3(10, 10, 1);
+    public Vector3 spawnBounds = new Vector3(10, 10, 0);
     //Character numerical value
     public int characterId;
 
@@ -13,20 +13,20 @@ public class ItemManager : MonoBehaviour
     public List<GameObject> itemPrefabs;
 
     //number of random point items that want to be spawned in
-    private int numberOfItems;
+    private int numberOfItems = 1;
 
     //list of items spawned in
-    private List<Item> items;
+    public List<GameObject> items;
 
 
 
     void Start()
     {
-        items = new List<Item>();
+        items = new List<GameObject>();
         //temporary section to spawn items
         for (int i = 0; i < numberOfItems; i++)
         {
-            SpawnItem(itemPrefabs[0]);
+            items.Add(SpawnItem(itemPrefabs[0]));
         }
     }
 
@@ -39,9 +39,15 @@ public class ItemManager : MonoBehaviour
     /// <summary>
     /// Spawns the item into the game world
     /// </summary>
-    void SpawnItem(GameObject prefab)
+    GameObject SpawnItem(GameObject prefab)
     {
-        
+        GameObject newItem = Instantiate(prefab);
+        Vector3 newPos = transform.position;
+        newPos.x += Random.Range(-spawnBounds.x / 2, spawnBounds.x / 2);
+        newPos.y += Random.Range(-spawnBounds.y / 2, spawnBounds.y / 2);
+        newItem.transform.position = newPos;
+
+        return newItem;
     }
 
     //used to spawn in the main item character has to find
