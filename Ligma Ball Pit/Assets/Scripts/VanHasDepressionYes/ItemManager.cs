@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour
 {
+    //width and height of range items can spawn
+    public Vector3 spawnBounds = new Vector3(10, 10, 1);
     //Character numerical value
     public int characterId;
 
@@ -15,6 +17,7 @@ public class ItemManager : MonoBehaviour
 
     //list of items spawned in
     private List<Item> items;
+
 
 
     void Start()
@@ -30,7 +33,7 @@ public class ItemManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     /// <summary>
@@ -47,5 +50,11 @@ public class ItemManager : MonoBehaviour
 
     }
 
+    //drawns a gizmos to identify the bounds of spawn area
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawCube(transform.position, spawnBounds);
+    }
 
 }
