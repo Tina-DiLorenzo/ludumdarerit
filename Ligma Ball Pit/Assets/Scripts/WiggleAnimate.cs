@@ -7,10 +7,14 @@ public class WiggleAnimate : MonoBehaviour
     Dictionary<string, int> playerDict = new Dictionary<string, int>();
     public static bool selected;
     public static string characterName;
+    private bool set = false;
+
+   
 
 
     private void Start()
     {
+        //adds names of players to get sprite animating properly
         name = "";
         selected = false;
         playerDict.Add("miles", 5);
@@ -20,10 +24,13 @@ public class WiggleAnimate : MonoBehaviour
         playerDict.Add("van",1);
         playerDict.Add("sevan",2);
     }
+
     void Update()
     {
-        if (characterName == null) return;
+        if (characterName == null && !set) return;
 
+        //makes sure correrect animation is playing
+        set = true;
         wiggleAniamator.SetInteger("Character", playerDict[characterName]);
 
     }
