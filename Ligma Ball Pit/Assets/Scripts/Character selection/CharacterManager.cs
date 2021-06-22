@@ -6,7 +6,9 @@ using UnityEngine.EventSystems;// Required when using Event data.
 
 public class CharacterManager : MonoBehaviour
 {
+    [SerializeField]
     private GameObject selected;
+
     public GameObject[] destroy;
     public AudioSource sound;
     public KeepName saveName;
