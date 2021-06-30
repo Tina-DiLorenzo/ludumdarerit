@@ -10,14 +10,4 @@ public class Item : MonoBehaviour
     {
         
     }
-
-    /// <summary>
-    /// Method that triggers when player and item collides
-    /// Will by default return 0
-    /// </summary>
-    int Collided()
-    {
-        //by default this should just delete the item
-        return pointValue;
-    }
 }
