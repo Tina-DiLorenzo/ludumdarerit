@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public GameObject boba;
     public GameObject ticket;
     public GameObject miku;
+    public GameObject tiger;
 
     //objects in scene
     public GameObject player;
