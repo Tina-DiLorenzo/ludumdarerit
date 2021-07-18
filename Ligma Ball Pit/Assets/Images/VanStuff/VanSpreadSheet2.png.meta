@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 990a3a0e3098e5646b7ca303cbfbabff
+guid: ea68803760fdd17458630da4e9eb6c55
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4817219530079041444
-    second: VanSpreadSheet_0
+      213: 1711269564257843062
+    second: VanSpreadSheet2_0
   - first:
-      213: -892750163291091373
-    second: VanSpreadSheet_1
+      213: 7925339411180263629
+    second: VanSpreadSheet2_1
   - first:
-      213: -5512999054083570700
-    second: VanSpreadSheet_2
+      213: 8353697048980734149
+    second: VanSpreadSheet2_2
   - first:
-      213: 3582043640726647724
-    second: VanSpreadSheet_3
+      213: 3372873600187584769
+    second: VanSpreadSheet2_3
   - first:
-      213: -6385833298576970568
-    second: VanSpreadSheet_4
+      213: -7081439803964878975
+    second: VanSpreadSheet2_4
   - first:
-      213: 7626998591300695939
-    second: VanSpreadSheet_5
+      213: 1748911099998602663
+    second: VanSpreadSheet2_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -157,74 +157,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: VanSpreadSheet_0
+      name: VanSpreadSheet2_0
       rect:
         serializedVersion: 2
-        x: 297
-        y: 157
-        width: 65
-        height: 73
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a77f6fc3a33ad240800000000000000
-      internalID: 4817219530079041444
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: VanSpreadSheet_1
-      rect:
-        serializedVersion: 2
-        x: 356
-        y: 191
-        width: 59
-        height: 59
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35eccdbd4705c93f0800000000000000
-      internalID: -892750163291091373
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: VanSpreadSheet_2
-      rect:
-        serializedVersion: 2
-        x: 415
-        y: 159
-        width: 59
-        height: 77
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4f3c846c194ed73b0800000000000000
-      internalID: -5512999054083570700
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: VanSpreadSheet_3
-      rect:
-        serializedVersion: 2
-        x: 297
-        y: 4
+        x: 42
+        y: 142
         width: 41
         height: 82
       alignment: 0
@@ -234,18 +171,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca3757776b9f5b130800000000000000
-      internalID: 3582043640726647724
+      spriteID: 677b68c1a96afb710800000000000000
+      internalID: 1711269564257843062
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: VanSpreadSheet_4
+      name: VanSpreadSheet2_1
       rect:
         serializedVersion: 2
-        x: 351
-        y: 45
+        x: 148
+        y: 131
         width: 69
         height: 119
       alignment: 0
@@ -255,19 +192,61 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bc6573d276f067a0800000000000000
-      internalID: -6385833298576970568
+      spriteID: dc89dc744367cfd60800000000000000
+      internalID: 7925339411180263629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: VanSpreadSheet_5
+      name: VanSpreadSheet2_2
       rect:
         serializedVersion: 2
-        x: 428
-        y: 4
-        width: 39
+        x: 279
+        y: 154
+        width: 65
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c0c9bdc43b4ee370800000000000000
+      internalID: 8353697048980734149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VanSpreadSheet2_3
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 161
+        width: 59
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 101597b4baadece20800000000000000
+      internalID: 3372873600187584769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VanSpreadSheet2_4
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 131
+        width: 59
         height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -276,8 +255,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 387f1e82fca88d960800000000000000
-      internalID: 7626998591300695939
+      spriteID: 18f8c52740ca9bd90800000000000000
+      internalID: -7081439803964878975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VanSpreadSheet2_5
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 178
+        width: 59
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a5872b1161654810800000000000000
+      internalID: 1748911099998602663
       vertices: []
       indices: 
       edges: []
