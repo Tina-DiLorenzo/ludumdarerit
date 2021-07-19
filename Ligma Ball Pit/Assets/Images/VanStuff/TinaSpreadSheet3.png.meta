@@ -1,31 +1,28 @@
 fileFormatVersion: 2
-guid: af4f64a02de3c00448bcc37adc86c59d
+guid: 2953c735557020b45afdd94215b265db
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6029967956761206790
-    second: TinaSpreadSheet2_0
+      213: -3747564565677496476
+    second: TinaSpreadSheet3_0
   - first:
-      213: -8138380848676884713
-    second: TinaSpreadSheet2_1
+      213: -1951635041960902788
+    second: TinaSpreadSheet3_1
   - first:
-      213: -5466693067466525563
-    second: TinaSpreadSheet2_2
+      213: 2183079759970793972
+    second: TinaSpreadSheet3_2
   - first:
-      213: 6221905418950398475
-    second: TinaSpreadSheet2_3
+      213: -6555621800625375415
+    second: TinaSpreadSheet3_3
   - first:
-      213: -5587857026214897365
-    second: TinaSpreadSheet2_5
+      213: 9119054460574903432
+    second: TinaSpreadSheet3_4
   - first:
-      213: -2381554803522438985
-    second: TinaSpreadSheet2_6
+      213: -2851868202317027856
+    second: TinaSpreadSheet3_5
   - first:
-      213: -408232193202478533
-    second: TinaSpreadSheet2_7
-  - first:
-      213: 9043347688507929003
-    second: TinaSpreadSheet2_8
+      213: -7094921981357991275
+    second: TinaSpreadSheet3_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -163,169 +160,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TinaSpreadSheet2_0
+      name: TinaSpreadSheet3_0
       rect:
         serializedVersion: 2
-        x: 125
-        y: 244
-        width: 39
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6006db598efbea350800000000000000
-      internalID: 6029967956761206790
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TinaSpreadSheet2_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 162
-        width: 47
-        height: 71
+        x: 108
+        y: 177
+        width: 46
+        height: 43
       alignment: 9
-      pivot: {x: 0.54668367, y: 0.08280472}
+      pivot: {x: 0.49721262, y: 0.15046833}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71fa5c3bcb9ae0f80800000000000000
-      internalID: -8138380848676884713
+      spriteID: 467a3f902e9fdfbc0800000000000000
+      internalID: -3747564565677496476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TinaSpreadSheet2_2
+      name: TinaSpreadSheet3_1
       rect:
         serializedVersion: 2
-        x: 120
-        y: 161
-        width: 58
+        x: 183
+        y: 162
+        width: 60
         height: 63
       alignment: 9
-      pivot: {x: 0.5189148, y: 0.04724121}
+      pivot: {x: 0.5, y: 0.05594841}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58431917e976224b0800000000000000
-      internalID: -5466693067466525563
+      spriteID: c7f37b005466ae4e0800000000000000
+      internalID: -1951635041960902788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TinaSpreadSheet2_3
+      name: TinaSpreadSheet3_2
       rect:
         serializedVersion: 2
-        x: 240
-        y: 15
-        width: 97
-        height: 186
-      alignment: 9
-      pivot: {x: 0.5452399, y: 0.49999997}
+        x: 294
+        y: 75
+        width: 70
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b02dd927306a85650800000000000000
-      internalID: 6221905418950398475
+      spriteID: 4f97769a97bdb4e10800000000000000
+      internalID: 2183079759970793972
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TinaSpreadSheet2_5
+      name: TinaSpreadSheet3_3
       rect:
         serializedVersion: 2
-        x: 451
-        y: 150
+        x: 405
+        y: 134
         width: 66
-        height: 59
+        height: 55
       alignment: 9
-      pivot: {x: 0.06782115, y: 0.7789154}
+      pivot: {x: 0.94048935, y: 0.9288541}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b295ac0f3a1f372b0800000000000000
-      internalID: -5587857026214897365
+      spriteID: 947faeb94b0c505a0800000000000000
+      internalID: -6555621800625375415
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TinaSpreadSheet2_6
+      name: TinaSpreadSheet3_4
       rect:
         serializedVersion: 2
-        x: 21
-        y: 29
-        width: 60
-        height: 67
+        x: 512
+        y: 136
+        width: 66
+        height: 54
       alignment: 9
-      pivot: {x: 0.60056466, y: 0.94210225}
+      pivot: {x: 0.05119925, y: 0.8453734}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b87be2368403fed0800000000000000
-      internalID: -2381554803522438985
+      spriteID: 88c220297b36d8e70800000000000000
+      internalID: 9119054460574903432
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TinaSpreadSheet2_7
+      name: TinaSpreadSheet3_5
       rect:
         serializedVersion: 2
         x: 142
-        y: 36
-        width: 20
-        height: 70
+        y: 42
+        width: 23
+        height: 69
       alignment: 9
-      pivot: {x: 0.5548531, y: 0.9544997}
+      pivot: {x: 0.5012552, y: 0.9339152}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b32a942bbfaa55af0800000000000000
-      internalID: -408232193202478533
+      spriteID: 0f569a6daf02c68d0800000000000000
+      internalID: -2851868202317027856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TinaSpreadSheet2_8
+      name: TinaSpreadSheet3_6
       rect:
         serializedVersion: 2
-        x: 388
-        y: 40
-        width: 67
-        height: 87
+        x: 208
+        y: 39
+        width: 20
+        height: 70
       alignment: 9
-      pivot: {x: 0.9011668, y: 0.88460433}
+      pivot: {x: 0.49999923, y: 0.9435573}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba17dd91fcc608d70800000000000000
-      internalID: 9043347688507929003
+      spriteID: 59adb086c06c98d90800000000000000
+      internalID: -7094921981357991275
       vertices: []
       indices: 
       edges: []
