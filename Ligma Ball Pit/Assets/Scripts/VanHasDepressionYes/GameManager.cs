@@ -19,6 +19,10 @@ public class GameManager : MonoBehaviour
     public GameObject miku;
     public GameObject tiger;
 
+    //player prefabs
+    public GameObject VanPrefab;
+    public GameObject TinaPrefab;
+
     //objects in scene
     public GameObject player;
     public GameObject hand;
@@ -29,6 +33,9 @@ public class GameManager : MonoBehaviour
 
     private float points; //points accumulated this round, passed to the victory/lose scene
 
+    public float spawnAreaHeight;
+    public float spawnAreaWidth;
+
     #region singleton
     public static GameManager instance;
     private void Awake()
@@ -37,15 +44,21 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-    public float spawnAreaHeight;
-    public float spawnAreaWidth;
-
     #endregion
 
     #region start
     void Start()
     {
-
+        switch (playerSelected)
+        {
+            //spawns player based off which # is selected
+            case 1.0f:
+                Instantiate(TinaPrefab, this.transform);
+                break;
+            default:
+                Instantiate(VanPrefab, this.transform);
+                break;
+        }
     }
     #endregion
 

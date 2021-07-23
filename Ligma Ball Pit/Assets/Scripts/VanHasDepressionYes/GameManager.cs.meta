@@ -3,7 +3,17 @@ guid: aeca99785a6ea4046bb848b54479e805
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - chewedGum: {instanceID: 0}
+  - gum: {instanceID: 0}
+  - boba: {instanceID: 0}
+  - ticket: {instanceID: 0}
+  - miku: {instanceID: 0}
+  - tiger: {instanceID: 0}
+  - VanPrefab: {instanceID: 0}
+  - TinaPrefab: {fileID: 5052629818341766338, guid: 4a8d799611374e14ea3d8a487cdc1981, type: 3}
+  - player: {instanceID: 0}
+  - hand: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
