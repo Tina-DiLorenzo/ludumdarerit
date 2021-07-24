@@ -4,30 +4,47 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour
 {
-    //width and height of range items can spawn
-    public Vector3 spawnBounds = new Vector3(10, 10, 0);
-    //Character numerical value
-    public int characterId;
+    #region fields
+    //width and height of the spawn area
+    private float xBounds;
+    private float yBounds;
+    //vector that holds these x and y values
+    private Vector3 spawnBounds;
 
-    //list of item prefabs
-    public List<GameObject> itemPrefabs;
+    //Selected character numerical value
+    private float playerSelected;
 
     //number of random point items that want to be spawned in
-    private int numberOfItems = 1;
+    public int numberOfItems = 1;
 
     //list of items spawned in
     public List<GameObject> items;
 
 
 
+    #endregion
+
+
     void Start()
     {
+
+        xBounds = GameManager.instance.spawnAreaWidth;
+        yBounds = GameManager.instance.spawnAreaHeight;
+        spawnBounds = new Vector3(xBounds, yBounds, 0);
+
+        playerSelected = GameManager.instance.playerSelected;
+
         items = new List<GameObject>();
-        //temporary section to spawn items
+
+
+        //spawn items that can be collected
         for (int i = 0; i < numberOfItems; i++)
         {
-            items.Add(SpawnItem(itemPrefabs[0]));
+            items.Add(SpawnItem(GameManager.instance.ticket));
         }
+
+        //spawn win condition item
+        items.Add(SpawnItem(playerSelected));
     }
 
     // Update is called once per frame
@@ -51,16 +68,25 @@ public class ItemManager : MonoBehaviour
     }
 
     //used to spawn in the main item character has to find
-    void SpawnItem(GameObject prefab, int characterId)
+    GameObject SpawnItem(float characterId)
     {
+        GameObject winCondition;
 
+        switch (characterId)
+        {
+            default:
+                winCondition = SpawnItem(GameManager.instance.miku);
+                break;
+        }
+
+        return winCondition;
     }
 
     //drawns a gizmos to identify the bounds of spawn area
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawCube(transform.position, spawnBounds);
+        Gizmos.DrawWireCube(transform.position, spawnBounds);
     }
 
 }

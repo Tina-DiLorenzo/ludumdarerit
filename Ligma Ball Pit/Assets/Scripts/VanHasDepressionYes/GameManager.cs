@@ -28,13 +28,15 @@ public class GameManager : MonoBehaviour
     public GameObject hand;
     public List<GameObject> items;
 
+    public GameObject spawnPoint;
+
     //values passed between scenes
     public float playerSelected; //number of player picked and what skin should be assigned to player/win objective
 
     private float points; //points accumulated this round, passed to the victory/lose scene
 
-    public float spawnAreaHeight;
-    public float spawnAreaWidth;
+    public float spawnAreaHeight = 10;
+    public float spawnAreaWidth = 10;
 
     #region singleton
     public static GameManager instance;
@@ -53,10 +55,10 @@ public class GameManager : MonoBehaviour
         {
             //spawns player based off which # is selected
             case 1.0f:
-                Instantiate(TinaPrefab, this.transform);
+                Instantiate(TinaPrefab, spawnPoint.transform);
                 break;
             default:
-                Instantiate(VanPrefab, this.transform);
+                Instantiate(VanPrefab, spawnPoint.transform);
                 break;
         }
     }
