@@ -38,6 +38,9 @@ public class CharacterManager : MonoBehaviour
         {
             saveName.SetName(selected.name);
             charObj.GetComponent<SpriteRenderer>().sprite = selected.GetComponent<Image>().sprite;
+
+            PlayerPrefs.SetFloat("charNum", selected.GetComponent<PlayerClick>().charNum);
+            
             sound.Play();
             charObj.GetComponent<PlayerMove>().Running = true;
             for(int i = 0; i < destroy.Length; i++)

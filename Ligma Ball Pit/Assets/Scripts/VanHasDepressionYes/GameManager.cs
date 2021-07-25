@@ -51,6 +51,7 @@ public class GameManager : MonoBehaviour
     #region start
     void Start()
     {
+        playerSelected = PlayerPrefs.GetFloat("charNum");
         switch (playerSelected)
         {
             //spawns player based off which # is selected

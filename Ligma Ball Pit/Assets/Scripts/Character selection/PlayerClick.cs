@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerClick : MonoBehaviour
 {
     public GameObject charMan;
-
+    public float charNum;
 
     // Update is called once per framev
     private void Start()

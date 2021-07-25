@@ -333,6 +333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charMan: {fileID: 493724085}
+  charNum: 1
 --- !u!1 &212499484
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,6 +501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charMan: {fileID: 493724085}
+  charNum: 2
 --- !u!1 &358765774
 GameObject:
   m_ObjectHideFlags: 0
@@ -1858,6 +1860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charMan: {fileID: 493724085}
+  charNum: 4
 --- !u!1 &972283483
 GameObject:
   m_ObjectHideFlags: 0
@@ -2102,6 +2105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charMan: {fileID: 493724085}
+  charNum: 3
 --- !u!1 &1120203935
 GameObject:
   m_ObjectHideFlags: 0
@@ -2454,6 +2458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charMan: {fileID: 493724085}
+  charNum: 0
 --- !u!1 &1765164720
 GameObject:
   m_ObjectHideFlags: 0
@@ -2611,7 +2616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c6670d27a05ae54a8c2f16688710169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVelo: 0.54
+  maxVelo: 1.63
   devisor: 3
   acceleration: 2
   arrows:
@@ -3316,3 +3321,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charMan: {fileID: 493724085}
+  charNum: 5
