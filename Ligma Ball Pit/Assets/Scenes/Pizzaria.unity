@@ -2624,7 +2624,7 @@ MonoBehaviour:
   - {fileID: 1120203937}
   alpha: 170
   soundVelo: 2
-  radius: 20
+  radius: 1
   boundL: -12.66
   boundR: 6.48
 --- !u!82 &1789602555
