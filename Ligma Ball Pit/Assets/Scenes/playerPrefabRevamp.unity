@@ -167,7 +167,7 @@ GameObject:
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -203,13 +203,9 @@ MonoBehaviour:
   ticket: {fileID: 2270311586987426202, guid: 6dbdfdde6e2299b449ab1295bef13a62, type: 3}
   miku: {fileID: 3934710251299526415, guid: e42e846de9219fb40ac39f1947323ca6, type: 3}
   tiger: {fileID: 1132455975438891162, guid: 78c0aa964ff06a543a79220a959f8cd0, type: 3}
-  VanPrefab: {fileID: 8060258635621366062, guid: 0f775a41789c4fd47bfa257602eb2837, type: 3}
-  TinaPrefab: {fileID: 5052629818341766338, guid: 4a8d799611374e14ea3d8a487cdc1981, type: 3}
-  player: {fileID: 0}
-  hand: {fileID: 0}
-  items: []
+  vanPrefab: {fileID: 8060258635621366062, guid: 0f775a41789c4fd47bfa257602eb2837, type: 3}
+  tinaPrefab: {fileID: 5052629818341766338, guid: 4a8d799611374e14ea3d8a487cdc1981, type: 3}
   spawnPoint: {fileID: 213742607}
-  playerSelected: 0
   spawnAreaHeight: 10
   spawnAreaWidth: 10
 --- !u!114 &1075696122

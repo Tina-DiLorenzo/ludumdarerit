@@ -19,20 +19,16 @@ public class ItemManager : MonoBehaviour
 
     //list of items spawned in
     public List<GameObject> items;
-
-
-
     #endregion
-
 
     void Start()
     {
 
-        xBounds = GameManager.instance.spawnAreaWidth;
-        yBounds = GameManager.instance.spawnAreaHeight;
+        xBounds = GameManager.instance.SpawnAreaWidth;
+        yBounds = GameManager.instance.SpawnAreaHeight;
         spawnBounds = new Vector3(xBounds, yBounds, 0);
 
-        playerSelected = GameManager.instance.playerSelected;
+        playerSelected = GameManager.instance.PlayerSelected;
 
         items = new List<GameObject>();
 
@@ -40,7 +36,7 @@ public class ItemManager : MonoBehaviour
         //spawn items that can be collected
         for (int i = 0; i < numberOfItems; i++)
         {
-            items.Add(SpawnItem(GameManager.instance.ticket));
+            items.Add(SpawnItem(GameManager.instance.Ticket));
         }
 
         //spawn win condition item
@@ -75,7 +71,7 @@ public class ItemManager : MonoBehaviour
         switch (characterId)
         {
             default:
-                winCondition = SpawnItem(GameManager.instance.miku);
+                winCondition = SpawnItem(GameManager.instance.Miku);
                 break;
         }
 

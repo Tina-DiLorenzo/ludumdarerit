@@ -12,33 +12,122 @@ public class GameManager : MonoBehaviour
 {
     #region fields
     //prefabs
-    public GameObject chewedGum;
-    public GameObject gum;
-    public GameObject boba;
-    public GameObject ticket;
-    public GameObject miku;
-    public GameObject tiger;
+    #region chewedGum
+    [SerializeField] private GameObject chewedGum;
+    public GameObject ChewedGum
+    {
+        get { return chewedGum; }
+    }
+    #endregion
+
+    #region gum
+    [SerializeField] private GameObject gum;
+    public GameObject Gum
+    {
+        get { return gum; }
+    }
+    #endregion
+
+    #region boba
+    [SerializeField] private GameObject boba;
+    public GameObject Boba
+    {
+        get { return boba; }
+    }
+    #endregion
+
+    #region ticket
+    [SerializeField] private GameObject ticket;
+    public GameObject Ticket
+    {
+        get { return ticket; }
+    }
+    #endregion
+
+    #region miku
+    [SerializeField] private GameObject miku;
+    public GameObject Miku
+    {
+        get { return miku; }
+    }
+    #endregion
+
+    #region tiger
+    [SerializeField] private GameObject tiger;
+    public GameObject Tiger
+    {
+        get { return tiger; }
+    }
+    #endregion
+
 
     //player prefabs
-    public GameObject VanPrefab;
-    public GameObject TinaPrefab;
+    #region vanPrefab
+    [SerializeField] private GameObject vanPrefab;
+    public GameObject VanPrefab
+    {
+        get { return vanPrefab; }
+    }
+    #endregion
+
+    #region tinaPrefab
+    [SerializeField] private GameObject tinaPrefab;
+    public GameObject TinaPrefab
+    {
+        get { return tinaPrefab; }
+    }
+    #endregion
+
 
     //objects in scene
-    public GameObject player;
-    public GameObject hand;
-    public List<GameObject> items;
+    private GameObject player;
+    private GameObject hand;
 
-    public GameObject spawnPoint;
+    #region items
+    private List<GameObject> items;
+    public List<GameObject> Items
+    {
+        get { return items; }
+    }
+    #endregion
 
-    //values passed between scenes
-    public float playerSelected; //number of player picked and what skin should be assigned to player/win objective
+    #region spawnPoint
+    [SerializeField] private GameObject spawnPoint;
+    public GameObject SpawnPoint
+    {
+        get { return spawnPoint; }
+    }
+    #endregion
+
+
+    //number of player picked and what skin should be assigned to player/win objective
+    #region playerSelected;
+    private float playerSelected;
+    public float PlayerSelected
+    {
+        get { return playerSelected; }
+    }
+    #endregion
 
     private float points; //points accumulated this round, passed to the victory/lose scene
 
-    public float spawnAreaHeight = 10;
-    public float spawnAreaWidth = 10;
+    #region spawnAreaHeight
+    [SerializeField] private float spawnAreaHeight = 10;
+    public float SpawnAreaHeight
+    {
+        get { return spawnAreaHeight; }
+    }
+    #endregion
 
-    #region singleton
+    #region spawnAreaWidth
+    [SerializeField] private float spawnAreaWidth = 10;
+    public float SpawnAreaWidth
+    {
+        get { return spawnAreaWidth; }
+    }
+    #endregion
+
+    #region singleton definition
     public static GameManager instance;
     private void Awake()
     {
@@ -56,10 +145,10 @@ public class GameManager : MonoBehaviour
         {
             //spawns player based off which # is selected
             case 1.0f:
-                Instantiate(TinaPrefab, spawnPoint.transform);
+                player = Instantiate(TinaPrefab, spawnPoint.transform);
                 break;
             default:
-                Instantiate(VanPrefab, spawnPoint.transform);
+                player = Instantiate(VanPrefab, spawnPoint.transform);
                 break;
         }
     }
@@ -81,9 +170,7 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region toDoList
-    //comments to read later on what needs to be done
     //collision checks for prefabs
-    //spawning prefabs in random locations inside the spawn area
     //link selection menu to game scene and game scene to end credits
     #endregion
 
