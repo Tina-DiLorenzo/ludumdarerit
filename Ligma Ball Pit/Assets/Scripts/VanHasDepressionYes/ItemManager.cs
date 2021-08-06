@@ -18,7 +18,22 @@ public class ItemManager : MonoBehaviour
     public int numberOfItems = 1;
 
     //list of items spawned in
-    public List<GameObject> items;
+    #region items
+    private List<GameObject> items;
+    public List<GameObject> Items
+    {
+        get { return items; }
+    }
+    #endregion
+
+    #endregion
+
+    #region singleton definition
+    public static ItemManager instance;
+    private void Awake()
+    {
+        instance = this;
+    }
     #endregion
 
     void Start()
