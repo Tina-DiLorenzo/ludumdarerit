@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerCollision : MonoBehaviour
 {
@@ -9,11 +11,15 @@ public class PlayerCollision : MonoBehaviour
         //testing the tag of the object colliding into the player
         switch (collision.collider.gameObject.tag)
         {
+            case "Miku":
+                SceneManager.LoadScene(0);
+                break;
             default:
                 Debug.Log("I HIT " + collision.collider.gameObject.tag);
                 //GameManager.instance.Items.Remove(collision.collider.gameObject);
                 //GameObject.Destroy(collision.collider.gameObject);
                 break;
+
         }
         //if (collision.collider.gameObject.tag == "Coin")
         //{
