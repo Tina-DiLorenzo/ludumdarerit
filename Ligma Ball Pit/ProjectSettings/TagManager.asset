@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Gum
+  - Miku
+  - ChewedGum
+  - Boba
+  - Ticket
+  - Tiger
+  - Boundary
   layers:
   - Default
   - TransparentFX

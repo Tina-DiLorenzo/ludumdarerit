@@ -83,6 +83,15 @@ public class GameManager : MonoBehaviour
     private GameObject player;
     private GameObject hand;
 
+    #region pointsText
+    [SerializeField] private GameObject pointsText;
+
+    public GameObject PointsText
+    {
+        get { return pointsText; }
+    }
+    #endregion
+
     #region items
     private List<GameObject> items;
     public List<GameObject> Items

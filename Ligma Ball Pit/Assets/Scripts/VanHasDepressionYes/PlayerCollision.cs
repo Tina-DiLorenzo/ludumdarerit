@@ -6,31 +6,27 @@ using UnityEngine.UI;
 
 public class PlayerCollision : MonoBehaviour
 {
+    private PointTracker pointTracker;
+
+    private void Start()
+    {
+        pointTracker = GameManager.instance.PointsText.GetComponent<PointTracker>();
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //testing the tag of the object colliding into the player
         switch (collision.collider.gameObject.tag)
         {
             case "Miku":
-                SceneManager.LoadScene(0);
+                PlayerPrefs.SetFloat("pointsCollected", pointTracker.Points);
+                SceneManager.LoadScene(3);
                 break;
             default:
                 Debug.Log("I HIT " + collision.collider.gameObject.tag);
-                //GameManager.instance.Items.Remove(collision.collider.gameObject);
-                //GameObject.Destroy(collision.collider.gameObject);
+                pointTracker.AddToScore(5f);
                 break;
 
         }
-        //if (collision.collider.gameObject.tag == "Coin")
-        //{
-            
-        //}
-        //else if (collision.collider.gameObject.tag == "Bomb")
-        //{
-        //    Debug.Log("I HIT THE BOMB");
-        //    GameManager.instance.bombs.Remove(collision.collider.gameObject);
-        //    GameObject.Destroy(collision.collider.gameObject);
-        //    gameObject.GetComponent<UpdateGameState>().LoseMenu();
-        //}
     }
 }
