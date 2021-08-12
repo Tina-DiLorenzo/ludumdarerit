@@ -10,133 +10,32 @@ using UnityEngine;
 /// </summary>
 public class GameManager : MonoBehaviour
 {
-    #region fields
-    //prefabs
-    #region chewedGum
+    #region Fields
+    [Header("Collectibles")]
     [SerializeField] private GameObject chewedGum;
-    public GameObject ChewedGum
-    {
-        get { return chewedGum; }
-    }
-    #endregion
-
-    #region gum
     [SerializeField] private GameObject gum;
-    public GameObject Gum
-    {
-        get { return gum; }
-    }
-    #endregion
-
-    #region boba
     [SerializeField] private GameObject boba;
-    public GameObject Boba
-    {
-        get { return boba; }
-    }
-    #endregion
-
-    #region ticket
     [SerializeField] private GameObject ticket;
-    public GameObject Ticket
-    {
-        get { return ticket; }
-    }
-    #endregion
-
-    #region miku
     [SerializeField] private GameObject miku;
-    public GameObject Miku
-    {
-        get { return miku; }
-    }
-    #endregion
-
-    #region tiger
     [SerializeField] private GameObject tiger;
-    public GameObject Tiger
-    {
-        get { return tiger; }
-    }
-    #endregion
 
-
-    //player prefabs
-    #region vanPrefab
+    [Header("Players")]
     [SerializeField] private GameObject vanPrefab;
-    public GameObject VanPrefab
-    {
-        get { return vanPrefab; }
-    }
-    #endregion
-
-    #region tinaPrefab
     [SerializeField] private GameObject tinaPrefab;
-    public GameObject TinaPrefab
-    {
-        get { return tinaPrefab; }
-    }
-    #endregion
 
+    [Header("Objects in scene")]
+    [SerializeField] private GameObject pointsText;
+    [SerializeField] private GameObject spawnPoint;
+    [SerializeField] private float spawnAreaHeight = 10;
+    [SerializeField] private float spawnAreaWidth = 10;
 
-    //objects in scene
+    //number of player picked and what skin should be assigned to player/win objective
+    private float playerSelected;
+    private List<GameObject> items;
     private GameObject player;
     private GameObject hand;
 
-    #region pointsText
-    [SerializeField] private GameObject pointsText;
-
-    public GameObject PointsText
-    {
-        get { return pointsText; }
-    }
-    #endregion
-
-    #region items
-    private List<GameObject> items;
-    public List<GameObject> Items
-    {
-        get { return items; }
-    }
-    #endregion
-
-    #region spawnPoint
-    [SerializeField] private GameObject spawnPoint;
-    public GameObject SpawnPoint
-    {
-        get { return spawnPoint; }
-    }
-    #endregion
-
-
-    //number of player picked and what skin should be assigned to player/win objective
-    #region playerSelected;
-    private float playerSelected;
-    public float PlayerSelected
-    {
-        get { return playerSelected; }
-    }
-    #endregion
-
-    private float points; //points accumulated this round, passed to the victory/lose scene
-
-    #region spawnAreaHeight
-    [SerializeField] private float spawnAreaHeight = 10;
-    public float SpawnAreaHeight
-    {
-        get { return spawnAreaHeight; }
-    }
-    #endregion
-
-    #region spawnAreaWidth
-    [SerializeField] private float spawnAreaWidth = 10;
-    public float SpawnAreaWidth
-    {
-        get { return spawnAreaWidth; }
-    }
-    #endregion
-
-    #region singleton definition
+    #region Singleton definition
     public static GameManager instance;
     private void Awake()
     {
@@ -146,7 +45,66 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
-    #region start
+    #region Properties
+    public GameObject ChewedGum
+    {
+        get { return chewedGum; }
+    }
+    public GameObject Gum
+    {
+        get { return gum; }
+    }
+    public GameObject Boba
+    {
+        get { return boba; }
+    }
+    public GameObject Ticket
+    {
+        get { return ticket; }
+    }
+    public GameObject Miku
+    {
+        get { return miku; }
+    }
+    public GameObject Tiger
+    {
+        get { return tiger; }
+    }
+    public GameObject VanPrefab
+    {
+        get { return vanPrefab; }
+    }
+    public GameObject TinaPrefab
+    {
+        get { return tinaPrefab; }
+    }
+    public GameObject PointsText
+    {
+        get { return pointsText; }
+    }
+    public List<GameObject> Items
+    {
+        get { return items; }
+    }
+    public GameObject SpawnPoint
+    {
+        get { return spawnPoint; }
+    }
+    public float SpawnAreaHeight
+    {
+        get { return spawnAreaHeight; }
+    }
+    public float PlayerSelected
+    {
+        get { return playerSelected; }
+    }
+    public float SpawnAreaWidth
+    {
+        get { return spawnAreaWidth; }
+    }
+    #endregion
+
+    #region Start & Update
     void Start()
     {
         playerSelected = PlayerPrefs.GetFloat("charNum");
@@ -161,16 +119,14 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
-    #endregion
-
-    #region update
     void Update()
     {
 
     }
     #endregion
 
-    #region Red square used to show spawn area
+    #region Gizmos
+    //draws red square to show spawn area
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -178,9 +134,8 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-    #region toDoList
-    //collision checks for prefabs
-    //link selection menu to game scene and game scene to end credits
+    #region ToDoList
+
     #endregion
 
 }

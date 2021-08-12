@@ -4,38 +4,38 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour
 {
-    #region fields
+    #region Fields
     //width and height of the spawn area
     private float xBounds;
     private float yBounds;
     //vector that holds these x and y values
     private Vector3 spawnBounds;
-
     //Selected character numerical value
     private float playerSelected;
 
-    //number of random point items that want to be spawned in
-    public int numberOfItems = 1;
+    [Header("Amount of collectibles")]
+    [SerializeField] private int numberOfItems = 1;
 
     //list of items spawned in
-    #region items
     private List<GameObject> items;
-    public List<GameObject> Items
-    {
-        get { return items; }
-    }
-    #endregion
 
-    #endregion
-
-    #region singleton definition
+    #region Singleton definition
     public static ItemManager instance;
     private void Awake()
     {
         instance = this;
     }
     #endregion
+    #endregion
 
+    #region Properties
+    public List<GameObject> Items
+    {
+        get { return items; }
+    }
+    #endregion
+
+    #region Start & Update
     void Start()
     {
 
@@ -63,6 +63,9 @@ public class ItemManager : MonoBehaviour
     {
 
     }
+    #endregion
+
+    #region Functions
 
     /// <summary>
     /// Spawns the item into the game world
@@ -92,12 +95,15 @@ public class ItemManager : MonoBehaviour
 
         return winCondition;
     }
+    #endregion
 
+    #region Gizmos
     //drawns a gizmos to identify the bounds of spawn area
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(transform.position, spawnBounds);
     }
+    #endregion
 
 }
