@@ -26,7 +26,7 @@ public class BallLogicManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameManager.instance.Player;
+        player = GameManager.instance.Player.transform.Find("Player").gameObject;
         hand = GameManager.instance.Hand;
 
     }

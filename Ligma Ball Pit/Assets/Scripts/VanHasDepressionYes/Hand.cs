@@ -6,16 +6,18 @@ public class Hand : MonoBehaviour
 {
     #region Fields
     [SerializeField]private float speed = .5f;
-    public GameObject player; //assigned in gameManager
-    public Transform playerTransform;
+    private Transform playerTransform;
+    //private Transform something;
     #endregion
 
     #region Start & Update
     private void Start()
     {
+        playerTransform = GameManager.instance.Player.transform.Find("Player");
     }
     void Update()
     {
+        //Debug.Log(playerTransform.position);
         gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, playerTransform.position, speed * Time.deltaTime);
     }
     #endregion

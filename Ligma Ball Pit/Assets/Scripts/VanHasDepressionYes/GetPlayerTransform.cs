@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class GetPlayerTransform : MonoBehaviour
 {
-    [SerializeField ]private Transform transform;
+    [SerializeField]private GameObject gameObject; 
     public Transform Transform
     {
-        get { return transform; }
+        get { return gameObject.transform; }
+    }
+
+    public GameObject GameObject
+    {
+        get { return gameObject; }
     }
 
 }

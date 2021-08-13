@@ -11,6 +11,10 @@ TagManager:
   - Ticket
   - Tiger
   - Boundary
+  - Hand
+  - Bottle
+  - Dino
+  - Cat
   layers:
   - Default
   - TransparentFX

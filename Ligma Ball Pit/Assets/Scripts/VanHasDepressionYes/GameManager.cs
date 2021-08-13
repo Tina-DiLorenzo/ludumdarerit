@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject ticket;
     [SerializeField] private GameObject miku;
     [SerializeField] private GameObject tiger;
+    [SerializeField] private GameObject bottle;
+    [SerializeField] private GameObject cat;
+    [SerializeField] private GameObject dino;
 
     [Header("Players")]
     [SerializeField] private GameObject vanPrefab;
@@ -26,6 +29,7 @@ public class GameManager : MonoBehaviour
     [Header("Objects in scene")]
     [SerializeField] private GameObject pointsText;
     [SerializeField] private GameObject spawnPoint;
+    [SerializeField] private GameObject handSpawnPoint;
     [SerializeField] private float spawnAreaHeight = 10;
     [SerializeField] private float spawnAreaWidth = 10;
 
@@ -76,6 +80,18 @@ public class GameManager : MonoBehaviour
     public GameObject Tiger
     {
         get { return tiger; }
+    }
+    public GameObject Bottle
+    {
+        get { return bottle; }
+    }
+    public GameObject Cat
+    {
+        get { return cat; }
+    }
+    public GameObject Dino
+    {
+        get { return dino; }
     }
     public GameObject VanPrefab
     {
@@ -130,8 +146,7 @@ public class GameManager : MonoBehaviour
                 player = Instantiate(VanPrefab, spawnPoint.transform.position, Quaternion.identity);
                 break;
         }
-        hand = Instantiate(handPrefab, spawnPoint.transform);
-        hand.GetComponent<Hand>().playerTransform = player.GetComponent<GetPlayerTransform>().transform;
+        hand = Instantiate(handPrefab, handSpawnPoint.transform);
     }
     void Update()
     {
