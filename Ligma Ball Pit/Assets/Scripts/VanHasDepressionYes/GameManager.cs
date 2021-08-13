@@ -33,6 +33,9 @@ public class GameManager : MonoBehaviour
     private float playerSelected;
     private List<GameObject> items;
     private GameObject player;
+
+    [SerializeField] private GameObject handPrefab;
+
     private GameObject hand;
 
     #region Singleton definition
@@ -46,6 +49,10 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region Properties
+    public GameObject Hand
+    {
+        get { return hand; }
+    }
     public GameObject ChewedGum
     {
         get { return chewedGum; }
@@ -102,9 +109,14 @@ public class GameManager : MonoBehaviour
     {
         get { return spawnAreaWidth; }
     }
+    public GameObject Player
+    {
+        get { return player; }
+    }
     #endregion
 
     #region Start & Update
+    
     void Start()
     {
         playerSelected = PlayerPrefs.GetFloat("charNum");
@@ -112,16 +124,17 @@ public class GameManager : MonoBehaviour
         {
             //spawns player based off which # is selected
             case 1.0f:
-                player = Instantiate(TinaPrefab, spawnPoint.transform);
+                player = Instantiate(TinaPrefab, spawnPoint.transform.position, Quaternion.identity);
                 break;
             default:
-                player = Instantiate(VanPrefab, spawnPoint.transform);
+                player = Instantiate(VanPrefab, spawnPoint.transform.position, Quaternion.identity);
                 break;
         }
+        hand = Instantiate(handPrefab, spawnPoint.transform);
+        hand.GetComponent<Hand>().playerTransform = player.GetComponent<GetPlayerTransform>().transform;
     }
     void Update()
     {
-
     }
     #endregion
 

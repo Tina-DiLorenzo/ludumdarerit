@@ -11,14 +11,20 @@ public class BallSpawner : MonoBehaviour
     //intial platform used to hold up player before all the balls spawn
     [SerializeField] private GameObject stand;
     [SerializeField] private GameObject ballPrefab;
-    [SerializeField] private float ballsToCreate = 1400;
+    [SerializeField] private float ballsToCreate = 1000f;
     [SerializeField] private float ballsPerSecond = 0.02f;
     [SerializeField] private float range = 6f;
     [SerializeField] private float timer = 0f;
 
+    private List<Ball> balls;
+
     #endregion
 
     #region Properties
+    public List<Ball> Balls
+    {
+        get { return balls; }
+    }
     public BallLogicManager BallLogicManager
     {
         get { return ballLogicManager; }
@@ -53,7 +59,7 @@ public class BallSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        balls = new List<Ball>();
     }
 
     // Update is called once per frame
@@ -64,13 +70,12 @@ public class BallSpawner : MonoBehaviour
             ballsToCreate--;
 
             GameObject newBall = Instantiate(ballPrefab);
-
             Vector3 newPosition = transform.position;
             newPosition.x += Random.Range(-range, range);
 
             newBall.transform.position = newPosition;
 
-            ballLogicManager.Balls.Add(newBall.GetComponent<Ball>());
+            balls.Add(newBall.GetComponent<Ball>());
 
             timer = Time.realtimeSinceStartup + ballsPerSecond;
         }

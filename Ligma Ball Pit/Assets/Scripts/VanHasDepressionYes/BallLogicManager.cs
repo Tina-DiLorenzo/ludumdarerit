@@ -5,11 +5,12 @@ using UnityEngine;
 public class BallLogicManager : MonoBehaviour
 {
     #region Field
-    [SerializeField] private GameObject player;
-    [SerializeField] private GameObject hand;
+    
     [SerializeField] private float lowGravityRange = 60f;
+    [SerializeField] private BallSpawner ballSpawner;
 
-    private List<Ball> balls;
+    private GameObject player;
+    private GameObject hand;
 
     #endregion
 
@@ -18,15 +19,6 @@ public class BallLogicManager : MonoBehaviour
     {
         get { return player; }
     }
-    public GameObject Hand
-    {
-        get { return hand; }
-    }
-
-    public List<Ball> Balls
-    {
-        get { return balls; }
-    }
 
     #endregion
 
@@ -34,16 +26,18 @@ public class BallLogicManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameManager.instance.Player;
+        hand = GameManager.instance.Hand;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < balls.Count; i++)
+        for (int i = 0; i < ballSpawner.Balls.Count; i++)
         {
-            GravityCheck(balls[i]);
-            UpdateShakeValues(balls[i]);
+            GravityCheck(ballSpawner.Balls[i]);
+            UpdateShakeValues(ballSpawner.Balls[i]);
         }
     }
     #endregion

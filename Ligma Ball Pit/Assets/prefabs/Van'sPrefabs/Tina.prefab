@@ -219,6 +219,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5052629818341766339}
+  - component: {fileID: 6568112114946733595}
   m_Layer: 0
   m_Name: Tina
   m_TagString: Untagged
@@ -242,6 +243,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6568112114946733595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5052629818341766338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b14a8b468c99706459d87af7785528e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transform: {fileID: 3493784058879983401}
 --- !u!1 &5052629818369287500
 GameObject:
   m_ObjectHideFlags: 0
