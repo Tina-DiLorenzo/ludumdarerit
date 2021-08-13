@@ -642,6 +642,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4884804209204193709, guid: 59aa4c06c44452d4fa55bb29a39b8451, type: 3}
+      propertyPath: cat
+      value: 
+      objectReference: {fileID: 6413508128279499367, guid: c0a9713ad8622ce40994138ad1073fe1, type: 3}
+    - target: {fileID: 4884804209204193709, guid: 59aa4c06c44452d4fa55bb29a39b8451, type: 3}
+      propertyPath: dino
+      value: 
+      objectReference: {fileID: 7916493351549807166, guid: 4bd808adcfb6f9047bf0c3a1edd16dce, type: 3}
+    - target: {fileID: 4884804209204193709, guid: 59aa4c06c44452d4fa55bb29a39b8451, type: 3}
+      propertyPath: bottle
+      value: 
+      objectReference: {fileID: 1926439597152649582, guid: 4474e1915d6a68c4aa54761c5ef8eb31, type: 3}
+    - target: {fileID: 4884804209204193709, guid: 59aa4c06c44452d4fa55bb29a39b8451, type: 3}
       propertyPath: pointsText
       value: 
       objectReference: {fileID: 1266253357}

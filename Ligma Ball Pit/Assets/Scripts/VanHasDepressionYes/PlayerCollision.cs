@@ -23,20 +23,34 @@ public class PlayerCollision : MonoBehaviour
                 GameObject.Destroy(collision.collider.gameObject);
                 pointTracker.AddToScore(5f);
                 break;
+            case "Bottle":
+                PlayerPrefs.SetFloat("pointsCollected", pointTracker.Points);
+                SceneManager.LoadScene("endScene");
+                break;
+            case "Cat":
+                PlayerPrefs.SetFloat("pointsCollected", pointTracker.Points);
+                SceneManager.LoadScene("endScene");
+                break;
+            case "Dino":
+                PlayerPrefs.SetFloat("pointsCollected", pointTracker.Points);
+                SceneManager.LoadScene("endScene");
+                break;
             case "Miku":
                 PlayerPrefs.SetFloat("pointsCollected", pointTracker.Points);
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene("endScene");
                 break;
             case "Tiger":
                 PlayerPrefs.SetFloat("pointsCollected", pointTracker.Points);
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene("endScene");
+                break;
+            case "Boba":
+                PlayerPrefs.SetFloat("pointsCollected", pointTracker.Points);
+                SceneManager.LoadScene("endScene");
                 break;
 
 
             default:
-                Debug.Log("I HIT " + collision.collider.gameObject.tag);
-                
-                
+                //Debug.Log("I HIT " + collision.collider.gameObject.tag);
                 break;
 
         }

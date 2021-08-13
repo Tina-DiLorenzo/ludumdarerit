@@ -88,9 +88,28 @@ public class ItemManager : MonoBehaviour
 
         switch (characterId)
         {
+            case 0.0f: //Van
+                winCondition = SpawnItem(GameManager.instance.Bottle);
+                break;
+            case 1.0f: //Emma
+                winCondition = SpawnItem(GameManager.instance.Cat);
+                break;
+            case 2.0f: //Sevan
+                winCondition = SpawnItem(GameManager.instance.Dino);
+                break;
+            case 3.0f: //Sofia
+                winCondition = SpawnItem(GameManager.instance.Tiger);
+                break;
+            case 4.0f: //Tina
+                winCondition = SpawnItem(GameManager.instance.Miku);
+                break;
+            case 5.0f: //Miles
+                winCondition = SpawnItem(GameManager.instance.Boba);
+                break;
             default:
                 winCondition = SpawnItem(GameManager.instance.Miku);
                 break;
+            
         }
 
         return winCondition;
