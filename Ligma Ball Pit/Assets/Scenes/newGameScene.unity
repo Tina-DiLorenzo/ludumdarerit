@@ -666,6 +666,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1106136245}
     - target: {fileID: 4884804209204193709, guid: 59aa4c06c44452d4fa55bb29a39b8451, type: 3}
+      propertyPath: sevanPrefab
+      value: 
+      objectReference: {fileID: 552445135115111725, guid: 3a8bae20113a0314c99a7d2aac1d53b5, type: 3}
+    - target: {fileID: 4884804209204193709, guid: 59aa4c06c44452d4fa55bb29a39b8451, type: 3}
       propertyPath: handSpawnPoint
       value: 
       objectReference: {fileID: 2036264471}
