@@ -654,6 +654,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1926439597152649582, guid: 4474e1915d6a68c4aa54761c5ef8eb31, type: 3}
     - target: {fileID: 4884804209204193709, guid: 59aa4c06c44452d4fa55bb29a39b8451, type: 3}
+      propertyPath: emmaPrefab
+      value: 
+      objectReference: {fileID: 2401238109786230891, guid: a7e2166aa17fb3e42bf95c59b190e4f8, type: 3}
+    - target: {fileID: 4884804209204193709, guid: 59aa4c06c44452d4fa55bb29a39b8451, type: 3}
       propertyPath: pointsText
       value: 
       objectReference: {fileID: 1266253357}

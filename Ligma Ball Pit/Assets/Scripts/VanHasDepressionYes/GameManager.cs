@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     [Header("Players")]
     [SerializeField] private GameObject vanPrefab;
     [SerializeField] private GameObject tinaPrefab;
+    [SerializeField] private GameObject emmaPrefab;
 
     [Header("Objects in scene")]
     [SerializeField] private GameObject pointsText;
@@ -97,6 +98,10 @@ public class GameManager : MonoBehaviour
     {
         get { return vanPrefab; }
     }
+    public GameObject EmmaPrefab
+    {
+        get { return emmaPrefab; }
+    }
     public GameObject TinaPrefab
     {
         get { return tinaPrefab; }
@@ -139,7 +144,22 @@ public class GameManager : MonoBehaviour
         switch (playerSelected)
         {
             //spawns player based off which # is selected
-            case 1.0f:
+            case 0.0f: //Van
+                player = Instantiate(VanPrefab, spawnPoint.transform.position, Quaternion.identity);
+                break;
+            case 1.0f: //Emma
+                player = Instantiate(EmmaPrefab, spawnPoint.transform.position, Quaternion.identity);
+                break;
+            case 2.0f:
+                player = Instantiate(TinaPrefab, spawnPoint.transform.position, Quaternion.identity);
+                break;
+            case 3.0f:
+                player = Instantiate(TinaPrefab, spawnPoint.transform.position, Quaternion.identity);
+                break;
+            case 4.0f:
+                player = Instantiate(TinaPrefab, spawnPoint.transform.position, Quaternion.identity);
+                break;
+            case 5.0f:
                 player = Instantiate(TinaPrefab, spawnPoint.transform.position, Quaternion.identity);
                 break;
             default:

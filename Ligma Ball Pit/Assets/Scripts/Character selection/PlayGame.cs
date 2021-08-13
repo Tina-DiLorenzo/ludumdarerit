@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class PlayGame : MonoBehaviour
 {
     public float radius = 1;
-    public int scene;
     public GameObject player;
 
     /// <summary>
@@ -17,7 +16,7 @@ public class PlayGame : MonoBehaviour
         if (!player.GetComponent<PlayerMove>().Running) return;
         if (!CheckRadius()) return;
 
-        SceneManager.LoadScene(scene);
+        SceneManager.LoadScene("newGameScene");
     }
 
     /// <summary>
