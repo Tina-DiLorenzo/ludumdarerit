@@ -187,6 +187,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2294281299488213009, guid: 5d450f73e3601e5419593f01135af577, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294281299488213009, guid: 5d450f73e3601e5419593f01135af577, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2294281299997035498, guid: 5d450f73e3601e5419593f01135af577, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -273,6 +281,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2294281299997035502, guid: 5d450f73e3601e5419593f01135af577, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488472174399797045, guid: 5d450f73e3601e5419593f01135af577, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7300890378044340991, guid: 5d450f73e3601e5419593f01135af577, type: 3}
+      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -731,7 +747,7 @@ RectTransform:
   m_LocalScale: {x: 6.975, y: 4.0109, z: 1}
   m_Children: []
   m_Father: {fileID: 1675303557}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

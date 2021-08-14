@@ -9,6 +9,6 @@ public class DisplayScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreText.text = "Final Score: " + PlayerPrefs.GetFloat("pointsCollected");
+        scoreText.text = "" + PlayerPrefs.GetFloat("pointsCollected");
     }
 }
