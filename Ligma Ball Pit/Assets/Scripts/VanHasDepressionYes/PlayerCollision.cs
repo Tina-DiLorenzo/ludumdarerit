@@ -61,7 +61,15 @@ public class PlayerCollision : MonoBehaviour
         //Debug.Log("Handy no touchy UwU");
         if (other.gameObject.tag == "Hand")
         {
-            Debug.Log("Handy touchy UwU");
+            //Debug.Log("1");
+            //a fun way so the hand can't kill the player before they load into the game
+            if (pointTracker.Points > 4)
+            {
+                //Debug.Log("2");
+                PlayerPrefs.SetFloat("pointsCollected", pointTracker.Points);
+                SceneManager.LoadScene("endScene");
+            }
+            
         }
     }
 }

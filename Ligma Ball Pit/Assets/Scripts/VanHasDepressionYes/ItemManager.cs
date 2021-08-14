@@ -43,7 +43,7 @@ public class ItemManager : MonoBehaviour
         yBounds = GameManager.instance.SpawnAreaHeight;
         spawnBounds = new Vector3(xBounds, yBounds, 0);
 
-        playerSelected = GameManager.instance.PlayerSelected;
+        playerSelected = PlayerPrefs.GetFloat("charNum");
 
         items = new List<GameObject>();
 
