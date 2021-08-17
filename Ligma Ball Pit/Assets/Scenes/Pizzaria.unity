@@ -611,7 +611,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 2.9
-  scene: 2
   player: {fileID: 554727624}
 --- !u!212 &462763977
 SpriteRenderer:
@@ -1389,11 +1388,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d93279d4086f5f2479ea834b4829dbc5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e42598d3c20d9464793de6afad7ecba8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2620,7 +2619,7 @@ MonoBehaviour:
   devisor: 3
   acceleration: 2
   arrows:
-  - {fileID: 2135947459}
+  - {fileID: 1977681162}
   - {fileID: 1120203937}
   alpha: 170
   soundVelo: 2
